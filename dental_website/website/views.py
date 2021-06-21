@@ -42,7 +42,7 @@ Message: {your_message}"""
             'Appointment Request ' + your_name, # Subject
             appointment_msg, # Message 
             your_email, # From E-mail
-            ['office_business@provider.com'], # To Email
+            ['send.mail.test.871@gmail.com'], # To Email
         )
         
         return render(request, 'appointment.html', {
@@ -68,9 +68,9 @@ def contact(request):
         # Send an email
         send_mail(
             'Contact form from ' + message_name, # Subject
-            message, # Message 
+            message + '\n Mail: ' + message_email, # Message 
             message_email, # From E-mail
-            ['office_business@provider.com'], # To Email
+            ['send.mail.test.871@gmail.com'], # To Email
         )
 
         return render(request, 'contact.html', {'message_name' : message_name})

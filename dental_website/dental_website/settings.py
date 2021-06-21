@@ -130,11 +130,20 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-# Email Settings
+'''
+# Email Settings - Test 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAI_USE_TLS = False
 # EMAI_USE_SSL = False
+'''
+#gmail_send/settings.py
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'send.mail.test.871@gmail.com'
+EMAIL_HOST_PASSWORD = 'ikzlczvysvtglbpf' #past the key or password app here
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'default from email'
