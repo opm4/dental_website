@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'dental_website.urls'
+ROOT_URLCONF = 'dental_website.dental_website.urls'
 
 TEMPLATES = [
     {
