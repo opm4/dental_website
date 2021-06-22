@@ -1,1 +1,1 @@
-web: gunicorn dental_website.wsgi
+web: gunicorn first-dental-website.wsgi
