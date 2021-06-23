@@ -24,10 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y&evx92yf+=b621vq+dk0+_8iruz20ul6080ds7hi$cf&22h0c'
+SECRET_KEY = config("SECRET_KEY")
+# copy/paste in terminal to generate secret key 
+# python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -148,11 +150,13 @@ EMAI_USE_TLS = False
 '''
 #gmail_send/settings.py
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'send.mail.test.871@gmail.com'
-EMAIL_HOST_PASSWORD = 'ikzlczvysvtglbpf' #past the key or password app here
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST = config("EMAIL_HOST", default="localhost")
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="") #past the key or password app here
+EMAIL_PORT = config("EMAIL_PORT", default=1025, cast=int)
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=False, cast=bool)
 # DEFAULT_FROM_EMAIL = 'default from email'
+# don't forget to run: py - smtpd -n -c DebuggingServer localhost:1025 
+# when testing locally
 
 django_heroku.settings(locals())
