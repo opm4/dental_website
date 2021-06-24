@@ -35,7 +35,11 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+if os.name == 'nt':
+    website_app  = 'website'
+else:
+    website_app = 'dental_website.website'
+    
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dental_website.website',
+    website_app,
     'gunicorn',
 ]
 
@@ -58,7 +62,11 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'dental_website.dental_website.urls'
+
+if os.name == 'nt':
+    ROOT_URLCONF = 'dental_website.urls'
+else:
+    ROOT_URLCONF = 'dental_website.dental_website.urls'
 
 TEMPLATES = [
     {
@@ -158,5 +166,6 @@ EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=False, cast=bool)
 # DEFAULT_FROM_EMAIL = 'default from email'
 # don't forget to run: py - smtpd -n -c DebuggingServer localhost:1025 
 # when testing locally
+
 
 django_heroku.settings(locals())
