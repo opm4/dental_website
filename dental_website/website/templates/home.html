@@ -19,7 +19,7 @@
                 <p data-animation="fadeInUp" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
                   offer you.</p>
                 <div class="welcome-btn-group">
-                  <a href="#" class="btn dento-btn mx-2" data-animation="fadeInUp" data-delay="500ms">Get Started</a>
+                  <a href="{% url 'home' %}#Read-More" class="btn dento-btn mx-2" data-animation="fadeInUp" data-delay="500ms">Get Started</a>
                   <a href="{% url 'contact' %}" class="btn dento-btn mx-2 active" data-animation="fadeInUp" data-delay="700ms">Contact Us</a>
                 </div>
               </div>
@@ -39,8 +39,8 @@
                 <p data-animation="fadeInDown" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
                   offer you.</p>
                 <div class="welcome-btn-group">
-                  <a href="#" class="btn dento-btn mx-2" data-animation="fadeInDown" data-delay="500ms">Get Started</a>
-                  <a href="#" class="btn dento-btn mx-2 active" data-animation="fadeInDown" data-delay="700ms">Contact Us</a>
+                  <a href="{% url 'home' %}#Read-More" class="btn dento-btn mx-2" data-animation="fadeInDown" data-delay="500ms">Get Started</a>
+                  <a href="{% url 'contact' %}" class="btn dento-btn mx-2 active" data-animation="fadeInDown" data-delay="700ms">Contact Us</a>
                 </div>
               </div>
             </div>
@@ -313,7 +313,7 @@
 
         <div class="col-12">
           <div class="more-btn text-center mt-50">
-            <a href="#" class="btn dento-btn">Read More <i class="fa fa-angle-double-right"></i></a>
+            <a href="{% url 'pricing' %}" class="btn dento-btn" name="Read-More">Read More <i class="fa fa-angle-double-right"></i></a>
           </div>
         </div>
       </div>
@@ -337,7 +337,7 @@
       <div class="row">
         <div class="col-12">
           <!-- Appointment Form -->
-          <div class="appointment-form">
+          <div class="appointment-form" name="book-appointment-form">
             <form action="{% url 'appointment' %}" method="post">
               {% csrf_token %}
               <div class="row">
