@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Subscribed to Dr.Dentis Newsletter{% endblock title %}
+{% block meta_description %} This is the website of Dr.Dentis.{% endblock meta_description %}
+{% block content %}
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Newsletter</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Newsletter</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+  
+  <!-- ***** Contact Area Start ***** -->
+
+    <center>
+        <h1> Thank you for subscribing to our Newsletter! </h1>
+
+        Your e-mail adress <strong>{{ nl_email }} </strong> has been added to our list.<br/>
+    
+
+    <br/><br/>
+    <strong>Note: </strong> It will take a moment to register you e-mail.
+    But do not worry, this will happen in time for you to get our latest Newsletter.
+
+    </center>
+    <br/><br/><br/><br/>
+  <!-- ***** Contact Area End ***** -->
+{% endblock content %}
+
+
+
+
+
+
+
+
+

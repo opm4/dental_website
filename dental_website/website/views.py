@@ -76,3 +76,19 @@ def contact(request):
         return render(request, 'contact.html', {'message_name' : message_name})
     else:
         return render(request, 'contact.html', {})
+    
+def newsletter(request):
+    if request.method == "POST":
+        nl_email = request.POST['nl-email']
+        
+        # Send an email
+        send_mail(
+            'Newsletter request from ' + nl_email, # Subject
+            'Please subscribe the following addres to Newsletter:' + '\n Mail: ' + nl_email, # Message 
+            nl_email, # From E-mail
+            ['send.mail.test.871@gmail.com'], # To Email
+        )
+
+        return render(request, 'newsletter.html', {'nl_email' : nl_email})
+    else:
+        return render(request, 'home.html', {})
