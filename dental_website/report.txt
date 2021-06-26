@@ -1,0 +1,36 @@
+$ git push heroku initial-project-setup:main > report.txt
+Enumerating objects: 282, done.
+Counting objects: 100% (282/282), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (263/263), done.
+Writing objects: 100% (282/282), 2.76 MiB | 1.32 MiB/s, done.
+Total 282 (delta 83), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> App not compatible with buildpack: https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/python.tgz
+remote:        More info: https://devcenter.heroku.com/articles/buildpacks#detection-failure
+remote:
+remote:  !     Push failed
+remote:  !
+remote:  ! ## Warning - The same version of this code has already been built: 5cb1d04c33f1959e8edce47d752da795f18506d6
+remote:  !
+remote:  ! We have detected that you have triggered a build from source code with version 5cb1d04c33f1959e8edce47d752da795f18506d6
+remote:  ! at least twice. One common cause of this behavior is attempting to deploy code from a different branch.
+remote:  !
+remote:  ! If you are developing on a branch and deploying via git you must run:
+remote:  !
+remote:  !     git push heroku <branchname>:main
+remote:  !
+remote:  ! This article goes into details on the behavior:
+remote:  !   https://devcenter.heroku.com/articles/duplicate-build-version
+remote:
+remote: Verifying deploy...
+remote:
+remote: !       Push rejected to first-dental-website.
+remote:
+To https://git.heroku.com/first-dental-website.git
+ ! [remote rejected] initial-project-setup -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/first-dental-website.git'
