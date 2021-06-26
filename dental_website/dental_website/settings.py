@@ -37,8 +37,10 @@ ALLOWED_HOSTS = []
 # Application definition
 if os.name == 'nt':
     website_app  = 'website'
+    blog_app = 'blog'
 else:
     website_app = 'dental_website.website'
+    blog_app = 'dental_website.blog'
     
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     website_app,
+    blog_app,
     'gunicorn',
 ]
 

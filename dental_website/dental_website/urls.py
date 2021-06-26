@@ -18,12 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 if os.name == 'nt':
-    url_name = 'website.urls'
+    website_url = 'website.urls'
+    blog_url = 'blog.urls'
 else:
-    url_name = 'dental_website.website.urls'
+    website_url = 'dental_website.website.urls'
+    blog_url = 'dental_website.blog.urls'
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(url_name)),
+    path('', include(website_url)),
+    path('blog/', include(blog_url)),
 ]
