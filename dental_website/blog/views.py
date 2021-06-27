@@ -15,6 +15,12 @@ class HomeView(ListView):
     ordering = ['-post_date']
     # ordering = ['-id']
     
+    def get_context_data(self, *args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super().get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        return context
+    
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'blog/article_details_blog.html'
@@ -50,5 +56,9 @@ class DeletePostView(DeleteView):
     success_url =  reverse_lazy('home_blog')
     
 def CategoryView(request, category):
-    category_posts = Post.objects.filter(category=category.replace('-',' '))
+    category_posts = Post.objects.filter(category__iexact=category.replace('-',' '))
     return render(request, 'blog/categories.html', { 'category' : category.title().replace('-',' ') , 'category_posts' : category_posts})
+
+def CategoryListView(request):
+    cat_menu_list = Category.objects.all()
+    return render(request, 'blog/category_list.html', { 'cat_menu_list' : cat_menu_list})
