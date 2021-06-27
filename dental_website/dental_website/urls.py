@@ -20,13 +20,17 @@ from django.urls import path, include
 if os.name == 'nt':
     website_url = 'website.urls'
     blog_url = 'blog.urls'
+    login_url = 'user_login.urls'
 else:
     website_url = 'dental_website.website.urls'
     blog_url = 'dental_website.blog.urls'
+    login_url = 'dental_website.user_login.urls'
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(website_url)),
     path('blog/', include(blog_url)),
+    path('user_login/', include('django.contrib.auth.urls')),
+    path('user_login/', include(login_url)),
 ]

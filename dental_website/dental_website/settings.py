@@ -38,9 +38,11 @@ ALLOWED_HOSTS = []
 if os.name == 'nt':
     website_app  = 'website'
     blog_app = 'blog'
+    login_app = 'user_login'
 else:
     website_app = 'dental_website.website'
     blog_app = 'dental_website.blog'
+    login_app = 'dental_website.user_login'
     
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -51,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     website_app,
     blog_app,
+    login_app,
     'gunicorn',
 ]
 
@@ -170,5 +173,8 @@ EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=False, cast=bool)
 # don't forget to run: py - smtpd -n -c DebuggingServer localhost:1025 
 # when testing locally
 
+
+LOGIN_REDIRECT_URL = 'home_blog'
+LOGOUT_REDIRECT_URL = 'home_blog'
 
 django_heroku.settings(locals())
