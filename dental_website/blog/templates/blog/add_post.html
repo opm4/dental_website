@@ -2,14 +2,18 @@
 {% block title %} Create a new blog post{% endblock title %} Create a new blog post
 {% block content %}
 
-<h1> Add blog Post </h1>
-<br/><br/>
+{% if user.is_authenticated %}
+    <h1> Add blog Post </h1>
+    <br/><br/>
 
-<div class="mb-3">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p}}
-        <button class="btn btn-success">Post</button>
-</div>
+    <div class="mb-3">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button class="btn btn-success">Post</button>
+    </div>
+{% else %}
+You are not allowed here!
+{% endif %}
 
 {% endblock content %}
