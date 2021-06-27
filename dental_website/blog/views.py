@@ -48,3 +48,7 @@ class DeletePostView(DeleteView):
     model = Post
     template_name = 'blog/delete_post.html'
     success_url =  reverse_lazy('home_blog')
+    
+def CategoryView(request, category):
+    category_posts = Post.objects.filter(category=category)
+    return render(request, 'blog/categories.html', { 'category' : category.title() , 'category_posts' : category_posts})
