@@ -12,6 +12,13 @@
             {{ form.as_p}}
             <button class="btn btn-success">Post</button>
     </div>
+
+    <script>
+    var name = "{{ user.id }}";
+    document.getElementById("author").value = name;
+    </script>
+
+
 {% else %}
 You are not allowed here!
 {% endif %}
