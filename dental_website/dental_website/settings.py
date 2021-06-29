@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     blog_app,
     login_app,
     'gunicorn',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
