@@ -19,6 +19,10 @@
     <br/>
     <hr>
     <br/>
+    {% if post.header_image %}
+        <img src="{{post.header_image.url}}">
+    {% endif %}
+    <br/><br/>
     {{post.body|safe}}
 
     <br/><br/>
