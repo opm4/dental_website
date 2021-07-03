@@ -3,7 +3,7 @@ from django.views import generic
 from django.views.generic import DetailView
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.urls import reverse_lazy
-from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
+from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfileChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from blog.models import Profile
 
@@ -42,3 +42,18 @@ class ShowProfilePageView(DetailView):
         page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
         context["page_user"] = page_user
         return context
+    
+class EditProfilePageView(generic.UpdateView):
+    model = Profile
+    form_class = ProfileChangeForm
+    template_name = 'registration/edit_profile_page.html'
+    # fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'instagram_url', 'pinterest_url', 'twitter_url' ]
+    # success_url = reverse_lazy('home_blog')
+    
+    # def get_context_data(self, *args, **kwargs):
+    #     # users = Profile.objects.all()
+    #     context = super().get_context_data(*args, **kwargs)
+        
+    #     page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
+    #     context["page_user"] = page_user
+    #     return context

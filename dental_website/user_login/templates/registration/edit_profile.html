@@ -1,8 +1,8 @@
 {% extends 'blog/base_blog.html' %}
-{% block title %} Edit Profile {% endblock title %} 
+{% block title %} Edit Settings {% endblock title %} 
 {% block content %}
 
-<h1> Register </h1>
+<h1> Edit Setting </h1>
 <br/><br/>
 
 {{ user.profile.bio}}
@@ -12,7 +12,7 @@
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p}}
-        <button class="btn btn-success">Update Profile</button>
+        <button class="btn btn-success">Update Setting</button>
 </div>
 
 {% endblock content %}
