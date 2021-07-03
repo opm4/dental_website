@@ -11,7 +11,13 @@
             {% csrf_token %}
             {{ form.media}}
             {{ form.as_p}}
-            <button class="btn btn-success">Post</button>
+            
+            
+            {% if user.profile.id %}
+                <button class="btn btn-success">Post</button>
+            {% else %}
+                <a href='{% url 'create_profile_page' %}'> Please create a user profile first</a>
+            {% endif %}
     </div>
 
     <script>
