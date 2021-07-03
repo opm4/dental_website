@@ -1,10 +1,13 @@
 {% extends 'blog/base_blog.html' %}
-{% block title %} Edit Profile {% endblock title %} Create a new blog post
+{% block title %} Edit Profile {% endblock title %} 
 {% block content %}
 
 <h1> Register </h1>
 <br/><br/>
 
+{{ user.profile.bio}}
+
+<br/><br/>
 <div class="mb-3">
     <form method="POST">
         {% csrf_token %}
