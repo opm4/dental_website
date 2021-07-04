@@ -97,6 +97,7 @@ WSGI_APPLICATION = 'dental_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -104,6 +105,18 @@ DATABASES = {
     }
 }
 
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config("DB_NAME", default='db'),
+        'USER': config("DB_USER", default='user'),
+        'PASSWORD': config("DB_PASS", default='pass'),
+        'HOST': config("DB_HOST", default='localhost'),
+        # 'PORT': config("DB_PORT"),
+    }
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -178,7 +191,7 @@ EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=False, cast=bool)
 # don't forget to run: py - smtpd -n -c DebuggingServer localhost:1025 
 # when testing locally
 
-
+#this might be the issue with elation "blog_category" does not exist from heroku
 LOGIN_REDIRECT_URL = 'home_blog'
 LOGOUT_REDIRECT_URL = 'home_blog'
 
