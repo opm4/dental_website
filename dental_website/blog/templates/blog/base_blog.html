@@ -56,8 +56,8 @@
               <a class="nav-link" href="{% url 'add_category' %}">Add Category</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{% url 'logout' %}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Options
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{user.first_name}} {{user.last_name}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Settings</a></li>
@@ -81,8 +81,10 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
                 <li><a class="dropdown-item" href="{% url 'login' %}">Log In</a></li>
+                <!--
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+                -->
               </ul>
             </li>
 
@@ -114,6 +116,22 @@
         </form>
         -->
       </div>
+      <!--
+      {% if user.is_authenticated %}
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+          </li>
+          <li class="nav-item">
+            {% if user.profile.id %}
+              <a class="nav-link" href="{% url 'show_profile_page' user.profile.id %}"> {{user.first_name}} {{user.last_name}}</a>
+            {% else %}
+              <a class="nav-link" href="{% url 'create_profile_page' %}"> {{user.first_name}} {{user.last_name}}</a>
+            {% endif %}
+          </li>
+        </ul>
+      {% endif %}
+      -->
     </div>
   </nav>
 
