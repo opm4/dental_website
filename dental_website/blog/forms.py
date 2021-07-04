@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import fields, widgets
-from .models import Post, Category
+from .models import Comment, Post, Category
 
 # choices = [
 #     ('coding', 'coding'), 
@@ -50,4 +50,14 @@ class CategoryEditForm(forms.ModelForm):
         
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+        
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'body')
+        
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
         }

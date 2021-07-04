@@ -57,21 +57,7 @@
         {% endif %}
     </form>
     <!-- End Likes Section-->
-    <br/><br/>
-    <hr>
-    <!-- Start Comments -->
-    <h2>Comments..</h2>
-    {% if not post.comments.all %}
-        No comments yet... <a href='#'>Add one</a>
-    {% else %}
-        {% for comment in post.comments.all %}
-            <strong> {{ comment.name}} -- {{ comment.date_added }} </strong>
-            <br/>
-            {{ comment.body }}
-        {% endfor %}
-    {% endif %}
-    <!-- End Comments -->
-    <br/><br/>
+    
     <br/><br/>
     <hr>
     <div class="card mb-3" >
@@ -120,5 +106,24 @@
         </div>
     </div>
 
-
+<br/><br/>
+    <hr>
+    <!-- Start Comments -->
+    <h2>Comments..</h2>
+    {% if not post.comments.all %}
+        No comments yet... <a href="{% url "add_comment" post.pk %}">Add one</a>
+    {% else %}
+    <a href="{% url "add_comment" post.pk %}"> Add comment</a>
+    <br/>
+    <br/>
+        {% for comment in post.comments.all %}
+            <strong> {{ comment.name}} -- {{ comment.date_added }} </strong>
+            <br/>
+            <p>{{ comment.body }}</p>
+        {% endfor %}
+        <a href="{% url "add_comment" post.pk %}"> Add comment</a>
+    {% endif %}
+    <!-- End Comments -->
+    <br/><br/>
+    
 {% endblock content %}
