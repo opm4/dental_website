@@ -17,13 +17,23 @@ import os
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static 
+
 if os.name == 'nt':
-    url_name = 'website.urls'
+    website_url = 'website.urls'
+    blog_url = 'blog.urls'
+    login_url = 'user_login.urls'
 else:
-    url_name = 'dental_website.website.urls'
+    website_url = 'dental_website.website.urls'
+    blog_url = 'dental_website.blog.urls'
+    login_url = 'dental_website.user_login.urls'
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(url_name)),
-]
+    path('', include(website_url)),
+    path('blog/', include(blog_url)),
+    path('user_login/', include('django.contrib.auth.urls')),
+    path('user_login/', include(login_url)),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

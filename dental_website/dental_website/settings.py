@@ -37,8 +37,12 @@ ALLOWED_HOSTS = []
 # Application definition
 if os.name == 'nt':
     website_app  = 'website'
+    blog_app = 'blog'
+    login_app = 'user_login'
 else:
     website_app = 'dental_website.website'
+    blog_app = 'dental_website.blog'
+    login_app = 'dental_website.user_login'
     
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -48,7 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     website_app,
+    blog_app,
+    login_app,
     'gunicorn',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -135,10 +142,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_MEDIA ='/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
 
 STATIC_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage'
 
@@ -167,5 +178,8 @@ EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=False, cast=bool)
 # don't forget to run: py - smtpd -n -c DebuggingServer localhost:1025 
 # when testing locally
 
+
+LOGIN_REDIRECT_URL = 'home_blog'
+LOGOUT_REDIRECT_URL = 'home_blog'
 
 django_heroku.settings(locals())
