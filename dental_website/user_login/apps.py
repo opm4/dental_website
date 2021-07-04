@@ -8,4 +8,4 @@ else:
 
 class UserLoginConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'user_login'
+    name = name_var
