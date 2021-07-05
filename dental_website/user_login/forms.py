@@ -3,7 +3,11 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm, Password
 from django.contrib.auth.models import User
 from django import forms
 from django.forms import fields, widgets 
-from blog.models import Profile
+# Application definition
+if os.name == 'nt':
+    from blog.models import Profile
+else:
+    from dental_website.blog.models import Profile
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
