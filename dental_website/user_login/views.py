@@ -5,7 +5,13 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm, Password
 from django.urls import reverse_lazy
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfileChangeForm, CreateProfilePageForm
 from django.contrib.auth.views import PasswordChangeView
-from blog.models import Profile
+import os 
+# Application definition
+if os.name == 'nt':
+    from blog.models import Profile
+else:
+    from dental_website.blog.models import Profile
+
 
 # Create your views here.
 
