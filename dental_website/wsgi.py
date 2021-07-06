@@ -11,10 +11,13 @@ import os
 # import django.core.handlers.wsgi
 from django.core.wsgi import get_wsgi_application
 
-if os.name == 'nt':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dental_website.settings')
-else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dental_website.dental_website.settings')
+# if os.name == 'nt':
+#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dental_website.settings')
+# else:
+#     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dental_website.dental_website.settings')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dental_website.settings')
+
 
 application = get_wsgi_application()
 # application = django.core.handlers.wsgi.WSGIHandler()

@@ -51,9 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    website_app,
-    blog_app,
-    login_app,
+    'website',
+    'blog',
+    'user_login',
     'gunicorn',
     'ckeditor',
 ]
@@ -74,6 +74,7 @@ if os.name == 'nt':
     ROOT_URLCONF = 'dental_website.urls'
 else:
     ROOT_URLCONF = 'dental_website.dental_website.urls'
+ROOT_URLCONF = 'dental_website.urls'
 
 TEMPLATES = [
     {
