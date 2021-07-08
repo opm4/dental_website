@@ -85,10 +85,25 @@
                   <li><a href="{% url 'about' %}">About</a></li>
                   <li><a href="{% url 'service' %}">Service</a></li>
                   <li><a href="{% url 'pricing' %}">Pricing</a></li>
-                  <li><a href="{% url 'blog' %}">Blog</a>
+                  <li><a href="{% url 'home_blog' %}"> Blog</a>
                     <ul class="dropdown">
-                      <li><a href="{% url 'blog' %}">- Blog</a></li>
-                      <li><a href="{% url 'blog_details' %}">- Blog Details</a></li>
+                      {% if user.is_authenticated %}
+                        <li><a href="#"><i>Logged in as: {{ user.first_name}}  {{ user.last_name}}</i></a></li>
+                        <li><a href="{% url 'add_post' %}">Add Post</a></li>
+                        <li><a href="{% url 'add_category' %}">Add Category</a></li>
+                        <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Settings</a></li>
+                        {% if user.profile.id %}
+                          <li><a href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile</a></li>
+                          <li><a href="{% url 'show_profile_page' user.profile.id %}">Show Profile</a></li>
+                        {% else %}
+                          <li><a href="{% url 'create_profile_page' %}">Create Profile</a></li>
+                        {% endif %}
+                        <li><a href="{% url 'logout' %}">Log Out</a></li>
+                      {% else %}
+                        <li><a href="{% url 'register' %}"> Register</a></li>
+                        <li><a href="{% url 'login' %}"> Login</a></li>
+
+                      {% endif %}
                     </ul>
                   </li>
                   <li><a href="{% url 'contact' %}">Contact</a></li>
