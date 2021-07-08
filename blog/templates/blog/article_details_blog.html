@@ -1,10 +1,39 @@
-{% extends 'blog/base_blog.html' %}
+{% extends 'base.html' %}
+{% comment %} {% extends 'blog/base_blog.html' %} {% endcomment %}
 {% load static %}
-{% block title %} {{ post.title_tag }} {% endblock title %} 
+{% block title %} {{ post.title_tag }} {% endblock title %}
+{% block meta_description %} This is the blog of Dr.Dentis.{% endblock meta_description %} 
 {% block content %}
 
-    
-    <h1> {{ post.title}} </h1>
+        <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <h2 class="title">Blog Details</h2>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'home_blog' %}">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ post.title}}</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+
+    {% comment %} <h1> {{ post.title}} </h1>
     <small> 
         By: 
         {{ post.author.first_name}} 
@@ -124,6 +153,75 @@
         <a href="{% url "add_comment" post.pk %}"> Add comment</a>
     {% endif %}
     <!-- End Comments -->
-    <br/><br/>
+    <br/><br/> {% endcomment %}
+
+    <!-- ****** Blog Area Start ******* -->
+    <section class="dento--blog-area mt-50">
+        <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 mb-100">
+            <!-- Blog Details Area -->
+            <div class="blog-details-area">
+                <img src="{% static '{{post.header_image.url}}' %}" alt="">
+
+                <h2 class="post-title">{{ post.title}}</h2>
+                <div class="post-meta">
+                <a href="#"><i class="icon_clock_alt"></i> {{post.post_date}} </a>
+                <a href="#"><i class="icon_chat_alt"></i> {{post.comments.count}} </a>
+                {% if user.is_authenticated %}
+                    {% if user.id == post.author.id %}
+                        <a href="{% url 'update_post' post.pk %}" >Edit</a> 
+                        <a href="{% url 'delete_post' post.pk %}" >Delete</a> 
+                    {% endif %}
+                {% endif %}
+                </div>
+                {{post.body|safe}}
+            </div>
+
+            <!-- Comments Area -->
+            <div class="comment_area clearfix">
+                <h5 class="title">{{post.comments.count}} Comments</h5>
+
+                <ol>
+                {% if not post.comments.all %}
+                    <li> No comments yet... <a href="{% url "add_comment" post.pk %}"><strong>Add one</strong></a>
+                    </li>
+                {% else %}
+                    {% for comment in post.comments.all %}
+                        <!-- Single Comment Area -->
+                        <li class="single_comment_area">
+                            <!-- Comment Content -->
+                            <div class="comment-content d-flex">
+                            <!-- Comment Author -->
+                            <div class="comment-author">
+                                <img src="{% static 'website/img/bg-img/28.jpg' %}" alt="author">
+                            </div>
+                            <!-- Comment Meta -->
+                            <div class="comment-meta">
+                                <a href="#" class="post-author">{{ comment.name}} / <span> {{ comment.date_added }}</span></a>
+                                <p>{{ comment.body }}</p>
+                                <a href="{% url "add_comment" post.pk %}" class="comment-reply">Reply</a>
+                            </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    
+                        
+                {% endif %}
+                </ol>
+            </div>
+                
+
+            
+            </div>
+
+
+
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- ****** Blog Area End ******* -->
     
 {% endblock content %}

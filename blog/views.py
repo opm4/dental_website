@@ -104,3 +104,12 @@ class AddCommentView(CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        post_pk = self.kwargs['pk']
+        stuff =  get_object_or_404(Post, id=self.kwargs['pk'])
+        post_title = stuff.title
+        context["post_title"] = post_title
+        context["post_pk"] = post_pk
+        return context
