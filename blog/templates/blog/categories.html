@@ -1,12 +1,79 @@
-{% extends 'blog/base_blog.html' %}
-
+{% extends 'base.html' %}
+{% comment %} {% extends 'blog/base_blog.html' %} {% endcomment %}
+{% load static %}
+{% block title %}Category{% endblock title %}
+{% block meta_description %} This is the blog of Dr.Dentis.{% endblock meta_description %}
 {% block content %}
 
+
+        <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <h2 class="title">Category {{ category }}</h2>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'home_blog' %}">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Category {{ category }}</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+
+    <section class="dento-blog-area mt-50">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-lg-8">
+
+{% comment %} {% for post in object_list %}
+                <!-- Single Blog Item -->
+                <div class="single-blog-item style-2 d-flex flex-wrap align-items-center mb-50">
+
+                <!-- Blog Thumbnail -->
+                <div class="blog-thumbnail">
+                    <a href="{% url 'article_detail' post.pk %}">
+                    <img src="{% static 'website/img/bg-img/16.jpg' %}" alt=""> 
+                    </a>
+                </div>
+                <!-- Blog Content -->
+                <div class="blog-content">
+                    <a href="{% url 'article_detail' post.pk %}" class="post-title"> {{ post.title}} </a>
+                    <p> {{ post.snippet}} </p>
+                    <div class="post-meta">
+                    <a href="#"><i class="icon_clock_alt"></i> {{ post.post_date}} </a>
+                    <a href="#"><i class="icon_chat_alt"></i> {{ post.comments.count}}</a>
+                    {% if user.is_authenticated %}
+                        {% if user.id == post.author.id %}
+                            <a href="{% url 'update_post' post.pk %}" >Edit</a>
+                            <a href="{% url 'delete_post' post.pk %}" >Delete</a>
+                        {% endif %}
+                    {% endif %}
+                    
+                    </div>
+                </div>
+                </div>
+            {% endfor %} {% endcomment %}
+
+
 {% if category_posts %}
-    <h1> Category {{ category }} </h1>
+    
     <ul>
         {% for post in category_posts %}
-            <li><a href="{% url 'article_detail' post.pk %}"> {{ post.title}} </a> -  
+            {% comment %} <li><a href="{% url 'article_detail' post.pk %}"> {{ post.title}} </a> -  
             {{ post.author.first_name}} 
             {{ post.author.last_name}} -- 
             {{ post.post_date}} 
@@ -19,11 +86,46 @@
                 {% endif %}
             </small>
             <br/>
-            {{ post.snippet}}</li>
+            {{ post.snippet}}</li> {% endcomment %}
+
+            <!-- Single Blog Item -->
+                <div class="single-blog-item style-2 d-flex flex-wrap align-items-center mb-50">
+
+                <!-- Blog Thumbnail -->
+                <div class="blog-thumbnail">
+                    <a href="{% url 'article_detail' post.pk %}">
+                    <img src="{% static 'website/img/bg-img/16.jpg' %}" alt=""> 
+                    </a>
+                </div>
+                <!-- Blog Content -->
+                <div class="blog-content">
+                    <a href="{% url 'article_detail' post.pk %}" class="post-title"> {{ post.title}} </a>
+                    <p> {{ post.snippet}} </p>
+                    <div class="post-meta">
+                    <a href="#"><i class="icon_clock_alt"></i> {{ post.post_date}} </a>
+                    <a href="#"><i class="icon_chat_alt"></i> {{ post.comments.count}}</a>
+                    {% if user.is_authenticated %}
+                        {% if user.id == post.author.id %}
+                            <a href="{% url 'update_post' post.pk %}" >Edit</a>
+                            <a href="{% url 'delete_post' post.pk %}" >Delete</a>
+                        {% endif %}
+                    {% endif %}
+                    
+                    </div>
+                </div>
+                </div>
+
+
         {% endfor %}
     </ul>
 {% else %}
     <h2> Sorry this page does not exist... </h2>
 {% endif %}
 
+
+
+  </div>
+        </div>
+    </div>
+    </section>
 {% endblock content %}
