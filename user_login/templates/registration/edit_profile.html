@@ -1,18 +1,54 @@
-{% extends 'blog/base_blog.html' %}
-{% block title %} Edit Settings {% endblock title %} 
+{% extends 'base.html' %}
+{% comment %} {% extends 'blog/base_blog.html' %} {% endcomment %}
+{% load static %}
+{% block title %} Edit Settings {% endblock title %}
+{% block meta_description %} This is the blog of Dr.Dentis.{% endblock meta_description %}
 {% block content %}
 
-<h1> Edit Setting </h1>
+        <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <h2 class="title"> Edit Settings</h2>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'home_blog' %}">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Edit Settings User: {{ user.first_name}} {{ user.last_name}}</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+<section class="dento--blog-area mt-50">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-lg-8 mb-100">
 <br/><br/>
 
-{{ user.profile.bio}}
 
-<br/><br/>
 <div class="mb-3">
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p}}
         <button class="btn btn-success">Update Setting</button>
 </div>
+
+      </div>
+        </div>
+    </div>
+</section>
 
 {% endblock content %}
