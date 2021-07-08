@@ -35,14 +35,14 @@ ALLOWED_HOSTS = ['first-dental-website.herokuapp.com','127.0.0.1']
 
 
 # Application definition
-if os.name == 'nt':
-    website_app  = 'website'
-    blog_app = 'blog'
-    login_app = 'user_login'
-else:
-    website_app = 'dental_website.website'
-    blog_app = 'dental_website.blog'
-    login_app = 'dental_website.user_login'
+# if os.name == 'nt':
+#     website_app  = 'website'
+#     blog_app = 'blog'
+#     login_app = 'user_login'
+# else:
+#     website_app = 'dental_website.website'
+#     blog_app = 'dental_website.blog'
+#     login_app = 'dental_website.user_login'
     
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -70,10 +70,10 @@ MIDDLEWARE = [
 ]
 
 
-if os.name == 'nt':
-    ROOT_URLCONF = 'dental_website.urls'
-else:
-    ROOT_URLCONF = 'dental_website.dental_website.urls'
+# if os.name == 'nt':
+#     ROOT_URLCONF = 'dental_website.urls'
+# else:
+#     ROOT_URLCONF = 'dental_website.dental_website.urls'
 ROOT_URLCONF = 'dental_website.urls'
 
 TEMPLATES = [
@@ -167,6 +167,7 @@ STATICFILES_DIRS = [
 
 
 STATIC_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

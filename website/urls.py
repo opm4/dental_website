@@ -1,14 +1,15 @@
 from django.urls import path
-from . import views
+from .views import home, contact, about, pricing, service, \
+    blog, blog_details, appointment, newsletter
 
 urlpatterns = [
-    path('', views.home, name="home"),
-    path('contact.html', views.contact, name="contact"),
-    path('about.html', views.about, name="about"),
-    path('pricing.html', views.pricing, name="pricing"),
-    path('service.html', views.service, name="service"),
-    path('blog.html', views.blog, name="blog"),
-    path('blog-details.html', views.blog_details, name="blog_details"),
-    path('appointment.html', views.appointment, name="appointment"),
-    path('newsletter.html', views.newsletter, name="newsletter"),
+    path('', home, name="home"),
+    path('contact.html', contact, name="contact"),
+    path('about.html', about, name="about"),
+    path('pricing.html', pricing, name="pricing"),
+    path('service.html', service, name="service"),
+    path('blog.html', blog, name="blog"),
+    path('blog-details.html', blog_details, name="blog_details"),
+    path('appointment.html', appointment, name="appointment"),
+    path('newsletter.html', newsletter, name="newsletter"),
 ]
