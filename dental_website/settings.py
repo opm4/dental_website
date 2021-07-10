@@ -202,16 +202,17 @@ LOGOUT_REDIRECT_URL = 'home_blog'
 django_heroku.settings(locals())
 
 #  Debugging only 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
+if config("DEBUG_PRODUCTION", default=False, cast=bool):
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'handlers': {
+            'console': {
+                'class': 'logging.StreamHandler',
+            },
         },
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'DEBUG',
-    },
-}
+        'root': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    }
