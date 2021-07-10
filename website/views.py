@@ -6,7 +6,8 @@ from blog.models import Post
 # Create your views here.
 def home(request):
     posts = Post.objects.all().order_by('-id')[:3]
-    return render(request, 'home.html', {'posts':posts})
+    services = Service.objects.all()[:5]
+    return render(request, 'home.html', {'posts':posts, 'services':services})
 
 def about(request):
     return render(request, 'about.html', {})
