@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'user_login',
     'gunicorn',
     'ckeditor',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -199,3 +200,18 @@ LOGIN_REDIRECT_URL = 'home_blog'
 LOGOUT_REDIRECT_URL = 'home_blog'
 
 django_heroku.settings(locals())
+
+#  Debugging only 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
