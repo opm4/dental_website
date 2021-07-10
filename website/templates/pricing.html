@@ -45,7 +45,22 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                {% if services %}
+                  {% for service in services %}
+                    <tr>
+                      <th scope="row"> {{service.name}} </th>
+                      <td> {{service.stage}} </td>
+                      <td> {{service.currency}} {{service.price}} </td>
+                    </tr>
+                  {% endfor %}
+                {% else %}
+                  <tr>
+                    <th scope="row">There is no service at the moment</th>
+                    <td>No times</td>
+                    <td>$ No Price</td>
+                  </tr>
+                {% endif %}
+                {% comment %} <tr>
                   <th scope="row">Teeth Whitening Service at home</th>
                   <td>1 times</td>
                   <td>$115.00</td>
@@ -154,7 +169,7 @@
                   <th scope="row">Implantation of an implant (price depends on system used)</th>
                   <td>1 tooth</td>
                   <td>$600.00</td>
-                </tr>
+                </tr> {% endcomment %}
               </tbody>
             </table>
           </div>
