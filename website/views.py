@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from .models import Service
+from blog.models import Post
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html', {})
+    posts = Post.objects.all().order_by('-id')[:3]
+    return render(request, 'home.html', {'posts':posts})
 
 def about(request):
     return render(request, 'about.html', {})

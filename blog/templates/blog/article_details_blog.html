@@ -162,7 +162,11 @@
             <div class="col-12 col-lg-10 mb-100">
             <!-- Blog Details Area -->
             <div class="blog-details-area">
-                <img src="{% static '{{post.header_image.url}}' %}" alt="">
+                {% if post.header_image %}
+                    <img src="{% static 'website/img/bg-img/16.jpg' %}" alt="">
+                {% else %}
+                    <img src="#" alt="">
+                {% endif %}
 
                 <h2 class="post-title">{{ post.title}}</h2>
                 <div class="post-meta">
