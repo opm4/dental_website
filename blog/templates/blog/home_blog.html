@@ -55,89 +55,58 @@
     {% endfor %}
 </ul> {% endcomment %}
 
-    <!-- *****Blog Area Start ***** -->
-    
-    <section class="dento-blog-area mt-50">
+<!-- *****Blog Area Start ***** -->
+<section class="dento-blog-area mt-50">
     <div class="container">
-        <div class="row">
+    <div class="row">
         <div class="col-12 col-lg-8">
-
-            {% comment %} {% for post in object_list %}
-                <li><a href="{% url 'article_detail' post.pk %}"> {{ post.title}} </a> - 
-                <a href="{% url 'category' post.category|slugify %}"> {{ post.category }} </a> - 
-                {{ post.author.first_name}} 
-                {{ post.author.last_name}} -- 
-                {{ post.post_date}} 
-                <small>
-                    {% if user.is_authenticated %}
-                        {% if user.id == post.author.id %}
-                            - <a href="{% url 'update_post' post.pk %}" >Edit</a>
-                            <a href="{% url 'delete_post' post.pk %}" >Delete</a>
-                        {% endif %}
+        {% if object_list %}
+        {% for post in object_list %}
+        <!-- Single Blog Item -->
+        <div class="single-blog-item style-2 d-flex flex-wrap align-items-center mb-50">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+            <a href="{% url 'article_detail' post.pk %}">
+                <img src="{% static 'website/img/bg-img/16.jpg' %}" alt="">
+            </a>
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+            <a href="{% url 'article_detail' post.pk %}" class="post-title">{{ post.title}}</a>
+            <p>{{ post.snippet}}</p>
+            <div class="post-meta">
+                <a href="#"><i class="icon_clock_alt"></i> {{ post.post_date}}</a>
+                <a href="#"><i class="icon_chat_alt"></i> {{ post.comments.count}}</a>
+                {% if user.is_authenticated %}
+                    {% if user.id == post.author.id %}
+                        <a href="{% url 'update_post' post.pk %}" >Edit</a>
+                        <a href="{% url 'delete_post' post.pk %}" >Delete</a>
                     {% endif %}
-                </small>
-                <br/>
-                {{ post.snippet}}</li>
-            {% endfor %} {% endcomment %}
-            
-            {% for post in object_list %}
-                <!-- Single Blog Item -->
-                <div class="single-blog-item style-2 d-flex flex-wrap align-items-center mb-50">
+                {% endif %}
+                
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1> Nothing to see here... Move along!</h1>
+        {% endif %}
 
-                <!-- Blog Thumbnail -->
-                <div class="blog-thumbnail">
-                    <a href="{% url 'article_detail' post.pk %}">
-                    <img src="{% static 'website/img/bg-img/16.jpg' %}" alt=""> 
-                    </a>
-                </div>
-                <!-- Blog Content -->
-                <div class="blog-content">
-                    <a href="{% url 'article_detail' post.pk %}" class="post-title"> {{ post.title}} </a>
-                    <p> {{ post.snippet}} </p>
-                    <div class="post-meta">
-                    <a href="#"><i class="icon_clock_alt"></i> {{ post.post_date}} </a>
-                    <a href="#"><i class="icon_chat_alt"></i> {{ post.comments.count}}</a>
-                    {% if user.is_authenticated %}
-                        {% if user.id == post.author.id %}
-                            <a href="{% url 'update_post' post.pk %}" >Edit</a>
-                            <a href="{% url 'delete_post' post.pk %}" >Delete</a>
-                        {% endif %}
-                    {% endif %}
-                    
-                    </div>
-                </div>
-                </div>
-            {% endfor %}
-            
 
-            {% comment %} <!-- Pagination -->
-            <nav class="dento-pagination mb-100">
-            <ul class="pagination">
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-            </ul>
-            </nav> {% endcomment %}
+
+
         </div>
 
         <!-- Dento Sidebar Area -->
         <div class="col-12 col-lg-4">
-            <div class="dento-sidebar">
-
-            {% comment %} <!-- Single Widget Area -->
-            <div class="single-widget-area search-widget">
-                <form action="#" method="post">
-                <input type="search" name="search" class="form-control" placeholder="Search ...">
-                <button type="submit"><i class="icon_search"></i></button>
-                </form>
-            </div> {% endcomment %}
+        <div class="dento-sidebar">
 
             <!-- Single Widget Area -->
             <div class="single-widget-area catagories-widget">
-                <h5 class="widget-title">Categories</h5>
+            <h5 class="widget-title">Categories</h5>
 
-                <!-- catagories list -->
-                <ul class="catagories-list">
+            <!-- catagories list -->
+            <ul class="catagories-list">
                 {% if cat_menu %}
                     {% for item in cat_menu %}
                         <li>
@@ -147,34 +116,36 @@
                         </li>
                     {% endfor %}
                 {% endif %}
-                </ul>
+            </ul>
             </div>
 
-            {% comment %} <!-- Single Widget Area -->
+            <!-- Single Widget Area -->
             <div class="single-widget-area news-widget">
-                <h5 class="widget-title">Recent News</h5>
+            <h5 class="widget-title">Recent News</h5>
 
-                <!-- Single News Area -->
+            <!-- Single News Area -->
+            {% if posts %}
+                {% for post in posts %}
                 <div class="single-news-area d-flex align-items-center">
-                <div class="blog-thumbnail">
+                    <div class="blog-thumbnail">
                     <img src="{% static 'website/img/bg-img/21.jpg' %}" alt="">
+                    </div>
+                    <div class="blog-content">
+                    <a href="{% url 'article_detail' post.pk %}" class="post-title">{{post.title}}</a>
+                    <span class="post-date">{{post.post_date}}</span>
+                    </div>
                 </div>
-                <div class="blog-content">
-                    <a href="#" class="post-title">Tooth decay: why good dental hygiene is important</a>
-                    <span class="post-date">28 Sep 2018</span>
-                </div>
-                </div> {% endcomment %}
-
-            {% comment %} <!-- Single Widget Area -->
-            <div class="single-widget-area adds-widget">
-                <a href="#"><img class="w-100" src="{% static 'website/img/bg-img/adds.png' %}" alt=""></a>
-            </div> {% endcomment %}
+                {% endfor %}
+            {% endif %}
 
             </div>
+
+
         </div>
         </div>
     </div>
-    </section>
-    <!-- *****Blog Area End ***** -->
+    </div>
+</section>
+<!-- *****Blog Area End ***** -->
 
 {% endblock content %}
