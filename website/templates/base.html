@@ -4,12 +4,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content=" {% block meta_description %}Welcome to the Website of Dr.Dentist.{% endblock meta_description %} ">
+  <meta name="description" content=" {% block meta_description %}Welcome to b-wisedental{% endblock meta_description %} ">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>{% block title %}Dento - Dentist &amp; Medical HTML Template{% endblock title %}</title>
+  <title>{% block title %}b-wisedental{% endblock title %}</title>
 
   <!-- Favicon -->
   <link rel="icon" href="{% static 'website/img/core-img/favicon.ico' %}">
@@ -36,8 +36,8 @@
           <!-- Top Content -->
           <div class="col-6 col-md-9 col-lg-8">
             <div class="top-header-content">
-              <a href="{% url 'contact' %}" data-toggle="tooltip" data-placement="bottom" title="28 Jackson Street, Chicago, 7788569 USA"><i class="fa fa-map-marker"></i> <span>28 Jackson Street, Chicago, 7788569 USA</span></a>
-              <a href="{% url 'contact' %}" data-toggle="tooltip" data-placement="bottom" title="info.dento@gmail.com"><i class="fa fa-envelope"></i> <span>info.dento@gmail.com</span></a>
+              <a href="{% url 'contact' %}" data-toggle="tooltip" data-placement="bottom" title="str. Georges Clemenceau nr. 4,  Cluj-Napoca, 400021"><i class="fa fa-map-marker"></i> <span>str. Georges Clemenceau nr. 4,  Cluj-Napoca, 400021</span></a>
+              <a href="{% url 'contact' %}" data-toggle="tooltip" data-placement="bottom" title="bwise.dental@gmail.com"><i class="fa fa-envelope"></i> <span>bwise.dental@gmail.com</span></a>
             </div>
           </div>
           <!-- Top Header Social Info -->
@@ -97,32 +97,11 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul id="nav">
-                  <li><a href="{% url 'home' %}">Home</a></li> 
-                  <li><a href="{% url 'about' %}">About</a></li>
-                  <li><a href="{% url 'service' %}">Service</a></li>
-                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
-                  <li><a href="{% url 'home_blog' %}"> Blog</a>
-                    {% comment %} <ul class="dropdown">
-                      <li><a href="{% url 'home_blog' %}">Blog</a></li>
-                      <li><a href="{% url 'home_blog' %}">Blog</a></li>
-                      {% if user.is_authenticated %}
-                        <li><a href="#"><i>Logged in as: {{ user.first_name}}  {{ user.last_name}}</i></a></li>
-                        <li><a href="{% url 'add_post' %}">- Add Post</a></li>
-                        <li><a href="{% url 'add_category' %}">Add Category</a></li>
-                        <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Settings</a></li>
-                        {% if user.profile.id %}
-                          <li><a href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile</a></li>
-                          <li><a href="{% url 'show_profile_page' user.profile.id %}">Show Profile</a></li>
-                        {% else %}
-                          <li><a href="{% url 'create_profile_page' %}">Create Profile</a></li>
-                        {% endif %}
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
-                      {% else %}
-                        <li><a href="{% url 'register' %}"> Register</a></li>
-                        <li><a href="{% url 'login' %}"> Login</a></li>
-                      {% endif %}
-                    </ul> {% endcomment %}
-                  </li>
+                  <li><a href="{% url 'home' %}">Acasa</a></li> 
+                  <li><a href="{% url 'about' %}">Despre</a></li>
+                  <li><a href="{% url 'service' %}">Servicii</a></li>
+                  <li><a href="{% url 'pricing' %}">Tarife</a></li>
+                  <li><a href="{% url 'home_blog' %}"> Blog</a></li>
                   <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
@@ -130,7 +109,7 @@
             </div>
 
             <!-- Booking Now Button -->
-            <a href="{% url 'home' %}#Read-More" class="btn dento-btn booking-btn">Booking Now</a>
+            <a href="{% url 'home' %}#Read-More" class="btn dento-btn booking-btn">Programeaza-te</a>
           </nav>
         </div>
       </div>
@@ -154,11 +133,14 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
             <a href="#" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
-            <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
+            <p>Nu ezitati sa ne contactati! </p>
             <div class="footer-contact">
-              <p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
-              <p><i class="icon_phone"></i> +84. 2252. 2250. 122</p>
-              <p><i class="icon_mail"></i> info.dento@gmail.com</p>
+              <p><i class="icon_pin"></i> str. Georges Clemenceau nr. 4, Cluj-Napoca</p>
+              <p><i class="icon_phone"></i> +40 741-040118</p>
+              <p><i class="icon_phone"></i> +40 745-638828</p>
+              <p><i class="icon_phone"></i> +40 727-095604</p>
+              <p><i class="icon_phone"></i> +40 264-440787</p>
+              <p><i class="icon_mail"></i> bwise.dental@gmail.com</p>
             </div>
           </div>
         </div>
@@ -167,15 +149,13 @@
         <div class="col-12 col-sm-6 col-lg">
           <div class="single-footer-widget">
             <!-- Widget Title -->
-            <h5 class="widget-title">Opening Hours</h5>
+            <h5 class="widget-title">Program</h5>
 
             <!-- Opening Hours -->
             <ul class="opening-hours">
-              <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
-              <li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
-              <li><span>Sat</span> <span>9.00-17.00</span></li>
-              <li><span>Sun</span> <span>10.00-17.00</span></li>
-              <li><span>Holiday</span> <span>Closed</span></li>
+              <li><span>Luni-Vineri</span> <span>8.00-20.00</span></li>
+              <li><span>Sambata-Duminica</span> <span>Inchis</span></li>
+              <li><span>Sarbatori</span> <span>Inchis</span></li>
             </ul>
           </div>
         </div>
@@ -189,16 +169,16 @@
             <!-- Quick Links Nav -->
             <nav>
               <ul class="quick-links">
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="#">FAQs</a></li>
+                <li><a href="{% url 'about' %}">Despre</a></li>
+                {% comment %} <li><a href="#">FAQs</a></li> {% endcomment %}
                 <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="#">Policy</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Advisors</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="{% url 'about' %}">Dentist</a></li>
-                <li><a href="{% url 'service' %}">Services</a></li>
-                <li><a href="#">Legals</a></li>
+                {% comment %} <li><a href="#">Policy</a></li> {% endcomment %}
+                {% comment %} <li><a href="#">News</a></li> {% endcomment %}
+                {% comment %} <li><a href="#">Advisors</a></li> {% endcomment %}
+                {% comment %} <li><a href="#">Careers</a></li> {% endcomment %}
+                <li><a href="{% url 'about' %}">Dentisti</a></li>
+                <li><a href="{% url 'service' %}">Servicii</a></li>
+                {% comment %} <li><a href="#">Legals</a></li> {% endcomment %}
               </ul>
             </nav>
           </div>
@@ -210,7 +190,7 @@
             <!-- Widget Title -->
             <h5 class="widget-title">Newsletter</h5>
 
-            <p>We will send out weekly newest article and some great offers</p>
+            <p>Iti von trimite ultimele articole publicate si niste oferte speciale!</p>
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
               <form action="{% url 'newsletter' %}" method="post" name="newsletter">
@@ -221,13 +201,13 @@
             </div>
 
             <!-- Social Info -->
-            <div class="footer-social-info">
+            {% comment %} <div class="footer-social-info">
               <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
               <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
               <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
               <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-            </div>
+            </div> {% endcomment %}
           </div>
         </div>
       </div>
