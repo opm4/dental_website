@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Contact Dr.Dentis{% endblock title %}
-{% block meta_description %} This is the website of Dr.Dentis.{% endblock meta_description %}
+{% block title %}Contact b-wisedental{% endblock title %}
+{% block meta_description %} Acesta este site-ul b-wisedental{% endblock meta_description %}
 {% block content %}
   <!-- ***** Breadcrumb Area Start ***** -->
   <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
@@ -19,7 +19,7 @@
         <div class="col-12">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Acasa</a></li>
               <li class="breadcrumb-item active" aria-current="page">Contact</li>
             </ol>
           </nav>
@@ -32,8 +32,8 @@
   <!-- ***** Contact Area Start ***** -->
   {% if message_name %}
     <center>
-      <h2> Thanks {{message_name}}! </h2>
-      <p>We recieved you email and we will respond shortly.</p>
+      <h2> Multumim! {{message_name}}! </h2>
+      <p>Am primit mesajul dumneavoastra si va vom raspunde cat de curand.</p>
     </center>
     </br></br></br>
   {% else %}
@@ -43,7 +43,7 @@
         <div class="row">
           <div class="col-12">
             <div class="google-maps mb-100">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7834.104491112309!2d23.58039999025595!3d46.77092828761791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e9ceeec0823%3A0xff34da158f9b96b0!2sBan%20Daniela%2C%20Cab.%20Medicin%C4%83%20Dentar%C4%83!5e0!3m2!1sen!2sro!4v1623774780214!5m2!1sen!2sro"
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812.4341191953915!2d23.585852073485462!3d46.77097202596408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e9ceeec0823%3A0xff34da158f9b96b0!2sBan%20Daniela%2C%20Cab.%20Medicin%C4%83%20Dentar%C4%83!5e0!3m2!1sen!2sro!4v1626021958024!5m2!1sen!2sro"
                 allowfullscreen></iframe>
             </div>
           </div>
@@ -54,17 +54,23 @@
         <!-- Contact Information -->
         <div class="col-12 col-md-4">
           <div class="contact-information">
-            <h5>Address</h5>
-            <p>28 Jackson Street, Chicago, 7788569 USA</p>
+            <h5>Adresa</h5>
+            <p>str. Georges Clemenceau nr. 4,  Cluj-Napoca, 400021</p>
 
-            <h5>Phone</h5>
-            <p>+84. 2252. 2250. 122</p>
+            <h5>Mobil</h5>
+            <p>+40 741-040118</p>
 
-            <h5>Fax</h5>
-            <p>+84. 2252. 2250. 125</p>
+            <h5>Mobil</h5>
+            <p>+40 745-638828</p>
+
+            <h5>Mobil</h5>
+            <p>+40 727-095604</p>
+
+            <h5>Fix</h5>
+            <p>+40 264-440787</p>
 
             <h5>Email</h5>
-            <p class="mb-0">info.dento@gmail.com</p>
+            <p class="mb-0"> bwise.dental@gmail.com</p>
           </div>
         </div>
 
@@ -73,7 +79,7 @@
           <div class="contact-form">
             <!-- Section Heading -->
             <div class="section-heading">
-              <h2>Get In Touch</h2>
+              <h2>Ia legatura cu noi</h2>
               <div class="line"></div>
             </div>
             <!-- Form -->
@@ -81,16 +87,16 @@
             {% csrf_token %}
               <div class="row">
                 <div class="col-lg-6">
-                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Nume">
                 </div>
                 <div class="col-lg-6">
-                  <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                  <input type="email" name="message-email" class="form-control mb-30" placeholder="Adresa Email">
                 </div>
                 <div class="col-12">
-                  <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                  <textarea name="message" class="form-control mb-30" placeholder="Mesaj"></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn dento-btn">Send Message</button>
+                  <button type="submit" class="btn dento-btn">Trimite Mesajul</button>
                 </div>
               </div>
             </form>

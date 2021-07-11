@@ -17,7 +17,8 @@ def pricing(request):
     return render(request, 'pricing.html', {'services':services})
 
 def service(request):
-    return render(request, 'service.html', {})
+    posts = Post.objects.all().order_by('-id')[:3]
+    return render(request, 'service.html', {'posts':posts})
 
 def blog(request):
     return render(request, 'blog.html', {})
