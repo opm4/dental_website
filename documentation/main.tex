@@ -22,6 +22,7 @@
 \documentclass[11pt]{scrartcl} % Font size
 
 \input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{comment}
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -51,7 +52,7 @@
 %	FIGURE EXAMPLE
 %----------------------------------------------------------------------------------------
 
-\section{Descrierea Aplicatiei}
+\section{Descrierea Aplicației}
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -61,14 +62,124 @@
 
 %------------------------------------------------
 
-\subsection{Site de prezentare cabinet dentar cu applicatie blog}
+\subsection{Site de prezentare cabinet dentar cu applicație blog}
 
-First-dental-website este site de prezentare al unui cabinet dentar, cu applicatie de blog integrata. A fost dezvoltat pentru a usura accesul la informatii clientilor care doresc sa vizite respectivul cabinet medical, cat si pentru a putea distibui informatii la o populatie mai mare, din partea medicilor. De mentionat este ca pentru implementarea acestei aplicatii s-a folosit framework-ul Django, front-end-ul (html, css si js) fiind descarcat de pe https://themeslab.org/ si adaptat. Ca facilitati oferite de aceasta implementare putem mentiona: trimitere de email pentru contact, programare vizita si newletter; harta interactiva google-maps integrata; applicatie de tip blog, cu posibilitatea de inregistrare, logare, publicare si editare articole, profile utilizatori si sectiune comentari. Toate aceste aspecte vor fi pe larg trate in cuprinsul acestui raport. 
+First-dental-website este site de prezentare al unui cabinet dentar, cu applicație blog integrată. A fost dezvoltat pentru a ușura accesul la informații clientilor care doresc sa vizite cabinetul medical, cât și pentru a putea distibui informații la o populație mai mare. De mentionaț este că pentru implementarea acestei aplicații s-a folosit framework-ul Django, front-end-ul (html, css și js) fiind descărcat de pe https://themeslab.org/ și adaptat pentru a reflecta informațiile cabinetului dentar. Ca facilități oferite de această implementare putem menționa: trimitere de email pentru contact, programare vizită și newletter; harta interactivă google-maps integrată; applicație blog, cu posibilitatea de înregistrare, logare, publicare și editare articole, profile utilizatori și sectiune comentari. Toate aceste aspecte vor fi pe larg trate în cuprinsul acestui raport. 
 
 %----------------------------------------------------------------------------------------
 %	TEXT EXAMPLE
 %----------------------------------------------------------------------------------------
 
+\section{Elementele Aplicației}
+
+Aplicația poate fi descompusă în urmatoarele elemente:
+
+\begin{itemize}
+	\item Administrare site
+		\begin{itemize}
+			\item Staf și Utilizatori
+			\item Gestionare Bază de Date
+		\end{itemize}
+	\item Web-site
+		\begin{itemize}
+			\item Prezentare Cabinet
+			\item Listă Prețuri
+			\item Programare și Contact
+		\end{itemize}
+	\item Blog
+		\begin{itemize}
+			\item Creare și Înregistrare Utilizator
+			\item Create, Editare, Stergere Articol Blog
+			\item Comentare Articol
+		\end{itemize}
+\end{itemize}
+
+%------------------------------------------------
+
+\subsection{Administrare Site}
+
+
+Una dintre facilitățile "bateriilor incluse" din Django este partea de administrare a sitetului. Aceasta dispune de o interfață care este capabilă să citeasca metadata modelelor înregistrate din aplicații și să furnizeze o imagine de ansamblu centrată pe model în care utilizatorii cu statut privilegiat (admin sau staff) pot sa gestioneze conținutul sitetului. Această interfață nu este totuși destinată pentru a construi un front-end in jurul ei, ci mai degrabă pentru a pentru a oferi un tool specific pentru membrii care se ocupă cu administrarea siteului.\\
+Partea de administrare a sitului poate fi modificată, dar nu este recomandat ca aceste facilități să fie folosite în afara acestei secțuni. În cazul în care o interfața orientată spre proces este necesară, una care să abstractizeze conținutul bazelor de date, este recomandat să fie adăugată în secțiunea de views a site-ului \footnote{https://docs.djangoproject.com/en/3.2/ref/contrib/admin/}. 
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Django_admin.png} % Example image
+	\caption{The Django admin site}
+\end{figure}
+
+%------------------------------------------------
+
+\subsubsection{Staff și Utilizatori}
+
+
+
+În secțiunea adminintrativă pentru gestionare a utilizatorilor, gasim lista completă profilelor a celor care access pe site. Aici putem sa verificăm tipul de access, datele personale și alte informații legate de utilizatori. Trebuie mentionat ca nu toți utilizatorii au acelasi privilegii: cei care fac parte din staff au access la sectiunea administrativă, restul având access numai pe pagina de blog. \\
+Tot din aceasta zonă putem sa adaugam un nou utilizator, să stergem un utilizator existen sau sa modificăm informatiile sau tipul de access al unui utilizator existent. Este de mentionat că în această secțiune, numai personalul administrativ are access și modificările conturilor ar trebui facute în această secțiune numai dacă există motive întemeiate. Altfe, este disponibilă o pagina din blog pentru ca utilizatorii să își poată gestiona singuri conturile.
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Staff_users.png} % Example image
+	\caption{Staff si Utilizatori}
+\end{figure}
+
+%------------------------------------------------
+
+\subsubsection{Gestionare Bază de Date}
+
+Tot în secțiunea administrativă avem posibilitatea să vedem continutul bazei de date, pentru modelele care au fost înregistrate în aplicația admin. Aici putem să accesăm direct datele conținute de  tabele, să le modificăm, să le ștergem sau să adăugam noi articole. Aceiași mențiune se aplică și aici, ca în cazul celorlalte view-uri ale administratiei, și anume că această interfață nu este cea utiliztă în mod uzual pentru a adăuga conțiunut, ci este rezervată administrației pentru a interveni sau a modifica date în caz de necesitate.
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Database_admin.png} % Example image
+	\caption{Admin Database View}
+\end{figure}
+
+Figura care urmează arată cum este structurată baza de date folosita în această aplicatie. Baza de date a fost inițial dezvoltată în SqLite, ulterior fiind schimbată la PostgreSQL pentru a putea fii folosită pe serverul de hoasting. 
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{my_project_visualized.png} % Example image
+	\caption{Structură Bază Date}
+\end{figure}
+%------------------------------------------------
+
+\subsection{Web-site}
+
+%------------------------------------------------
+
+\subsubsection{Prezentare Cabinet}
+
+%------------------------------------------------
+
+\subsubsection{Listă Prețuri}
+
+%------------------------------------------------
+
+\subsubsection{Programare și Contact}
+
+%------------------------------------------------
+
+
+
+\subsection{Blog}
+
+%------------------------------------------------
+
+\subsubsection{Creare și Înregistrare Utilizator}
+
+%------------------------------------------------
+
+\subsubsection{Create, Editare, Stergere Articol Blog}
+
+%------------------------------------------------
+
+\subsubsection{Comentare Articol}
+
+%------------------------------------------------
+
+
+\begin{comment}
 \section{Understanding Text}
 
 \subsection{How much wood would a woodchuck chuck if a woodchuck could chuck wood?}
@@ -220,5 +331,5 @@ Aliquam arcu turpis, ultrices sed luctus ac, vehicula id metus. Morbi eu feugiat
 Fusce varius orci ac magna dapibus porttitor. In tempor leo a neque bibendum sollicitudin. Nulla pretium fermentum nisi, eget sodales magna facilisis eu. Praesent aliquet nulla ut bibendum lacinia. Donec vel mauris vulputate, commodo ligula ut, egestas orci. Suspendisse commodo odio sed hendrerit lobortis. Donec finibus eros erat, vel ornare enim mattis et.
 
 %----------------------------------------------------------------------------------------
-
+\end{comment}
 \end{document}

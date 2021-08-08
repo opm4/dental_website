@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  8 JUL 2021 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  8 AUG 2021 12:42
 entering extended mode
 **./main.tex
 (main.tex
@@ -621,50 +621,54 @@ Package scrlayer-scrpage Info: deactivating warning for font element
 (scrlayer-scrpage)             `pagefoot' on input line 1109.
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
-) (main.aux)
+)
+(C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment') (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 47.
 LaTeX Font Info:    Trying to load font information for FML+futm on input line 
-46.
+47.
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 47.
 LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
-46.
+47.
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 47.
 LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
-46.
+47.
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 46.
-Package scrbase Info: activating english \contentsname on input line 46.
-Package scrbase Info: activating english \listfigurename on input line 46.
-Package scrbase Info: activating english \listtablename on input line 46.
+LaTeX Font Info:    ... okay on input line 47.
+Package scrbase Info: activating english \contentsname on input line 47.
+Package scrbase Info: activating english \listfigurename on input line 47.
+Package scrbase Info: activating english \listtablename on input line 47.
 \c@lstlisting=\count287
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
@@ -726,100 +730,138 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 46.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 46.
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 4
-9.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 47.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 5
+0.
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for FML+futmi on input line
- 49.
+ 50.
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 49.
+(Font)              scaled to size 13.24796pt on input line 50.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 49.
+(Font)              scaled to size 9.19998pt on input line 50.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 49.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+(Font)              scaled to size 7.35999pt on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 49.
+(Font)              scaled to size 13.24796pt on input line 50.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 49.
+(Font)              scaled to size 9.19998pt on input line 50.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 49.
+(Font)              scaled to size 7.35999pt on input line 50.
 <Figures//Home1.png, id=1, 919.435pt x 509.905pt>
 File: Figures//Home1.png Graphic file (type png)
 <use Figures//Home1.png>
-Package pdftex.def Info: Figures//Home1.png  used on input line 58.
+Package pdftex.def Info: Figures//Home1.png  used on input line 59.
 (pdftex.def)             Requested size: 341.43437pt x 189.35435pt.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 65.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 65.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 65.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 65.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 65.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 65.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 67.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 67.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 67.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 67.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 67.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 67.
 
-Overfull \hbox (4.73616pt too wide) in paragraph at lines 80--81
-\T1/futs/m/n/10.95 According to the As-so-ci-ated Press (1988), a New York Fish
- and Wildlife tech-ni-cian named Richard
- []
-
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 81.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 81.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 81.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 81.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 81.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 81.
 [1
 
 
 {C:/Users/Matei/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Figures//Home
 1.png>]
 LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
-143.
+78.
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ts1futs.fd
 File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
 )
-[2]
-(C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(luftballons.pl [3]) [4] (main.aux) ) 
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 103.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 103.
+<Figures//Django_admin.png, id=10, 869.2475pt x 422.07687pt>
+File: Figures//Django_admin.png Graphic file (type png)
+<use Figures//Django_admin.png>
+Package pdftex.def Info: Figures//Django_admin.png  used on input line 107.
+(pdftex.def)             Requested size: 341.43437pt x 165.7879pt.
+
+[2 <./Figures//Django_admin.png>]
+<Figures//Staff_users.png, id=16, 902.37125pt x 396.48125pt>
+File: Figures//Staff_users.png Graphic file (type png)
+<use Figures//Staff_users.png>
+Package pdftex.def Info: Figures//Staff_users.png  used on input line 122.
+(pdftex.def)             Requested size: 341.43437pt x 150.0171pt.
+
+Overfull \hbox (6.87506pt too wide) in paragraph at lines 130--131
+\T1/futs/m/n/10.95 con[]inute de tabele, s  le mod-i-fic m, s  le []tergem sau 
+s  ad ugam noi ar-ti-cole. Aceia[]i men[]iune
+ []
+
+<Figures//Database_admin.png, id=17, 878.28125pt x 349.80687pt>
+File: Figures//Database_admin.png Graphic file (type png)
+<use Figures//Database_admin.png>
+Package pdftex.def Info: Figures//Database_admin.png  used on input line 134.
+(pdftex.def)             Requested size: 341.43437pt x 135.99178pt.
+<Figures//my_project_visualized.png, id=18, 1319.93124pt x 1352.05125pt>
+File: Figures//my_project_visualized.png Graphic file (type png)
+<use Figures//my_project_visualized.png>
+Package pdftex.def Info: Figures//my_project_visualized.png  used on input line
+ 142.
+(pdftex.def)             Requested size: 341.43437pt x 349.73016pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Excluding 'comment' comment. [3 <./Figures//Staff_users.png> <./Figures//Databa
+se_admin.png>] [4 <./Figures//my_project_visualized.png>] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 10994 strings out of 479321
- 212878 string characters out of 2856584
- 870133 words of memory out of 3000000
- 28267 multiletter control sequences out of 15000+600000
- 508474 words of font info for 124 fonts, out of 8000000 for 9000
+ 10579 strings out of 479321
+ 209651 string characters out of 2856584
+ 670781 words of memory out of 3000000
+ 27846 multiletter control sequences out of 15000+600000
+ 546558 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,19n,116p,10601b,2175s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/Matei/AppData/Local/Programs/MiK
-TeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Matei/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/fourier/fourier-mex.pfb><C:/Users/Matei/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Matei/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Matei/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Matei/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (4 pages, 677355 bytes).
+ 111i,18n,116p,10601b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users
+/Matei/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Mate
+i/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/M
+atei/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/User
+s/Matei/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on main.pdf (4 pages, 933461 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
