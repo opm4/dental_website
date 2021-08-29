@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  29 AUG 2021 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  29 AUG 2021 15:58
 entering extended mode
 **./main.tex
 (main.tex
@@ -924,7 +924,7 @@ act.png>] (main.aux) )
 Here is how much of TeX's memory you used:
  11077 strings out of 479321
  215291 string characters out of 2856584
- 877003 words of memory out of 3000000
+ 877001 words of memory out of 3000000
  28326 multiletter control sequences out of 15000+600000
  547680 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -936,7 +936,7 @@ nappen/ec/dpi600\ecsx1095.pk><C:/Users/Matei/AppData/Local/Programs/MiKTeX/font
 s/type1/adobe/utopia/putb8a.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTeX/f
 onts/type1/adobe/utopia/putr8a.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTe
 X/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (10 pages, 3030987 bytes).
+Output written on main.pdf (10 pages, 3030962 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

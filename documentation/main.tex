@@ -203,7 +203,7 @@ Informațiile legate de experiență și echipă sunt prezentate din nou în sec
 \subsubsection{Programare și Contact}
 
 Pentru a facilita contactul cu clienții, sunt disponibilile două formulare de contact. Unul presentat în Fig.\ref{fig:form_prog} destinat realizării unei programări pentru consult. Programare care va fi confirmată ulterior telefonic de către secretara cabinetului. Și un al doilea formular prezentat in Fig.\ref{fig:form_contact} care este destinat trimiterii unui mesaj către cabinet. Tot aici este intgrat un iframe goolge maps pentru a ușura gasirea locației cabinetului.\\
-Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, care va expedia mesajele trimise de pe site către adresa cabinetului. Din motive de securitate, toate detallile legate de comunicare cu serverul de mail vor fi stocate ca variablile de mediu și se vor evita salvarea de date ce pot compromite accesul la serviciul de mail, direct în codul uplodat pe serverul de host sau git repository.
+Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, care va expedia mesajele trimise de pe site către adresa cabinetului. Din motive de securitate, toate detallile legate de comunicare cu serverul de mail vor fi stocate ca variablile de mediu și se va evita salvarea de date ce pot compromite accesul la serviciul de mail direct în codul uplodat pe serverul de host sau git repository.
 
 \lstinputlisting[
 	caption=Gmail mail server set-up, % Caption above the listing
@@ -219,14 +219,14 @@ Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=0.8\columnwidth]{form_programare.png} % Example image
-	\caption{Posibilitatea de a gestiona informațiile prezentate in secțiunea "Tarife" din zona de administrație}
+	\caption{Formular de programare pentru consult}
 	\label{fig:form_prog}
 \end{figure}
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=0.8\columnwidth]{form_contact.png} % Example image
-	\caption{Posibilitatea de a gestiona informațiile prezentate in secțiunea "Tarife" din zona de administrație}
+	\caption{Posibilitatea de a trimite un mesaj cabinetului în secțiunea contact}
 	\label{fig:form_contact}
 \end{figure}
 
