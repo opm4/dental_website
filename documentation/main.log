@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  8 AUG 2021 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  29 AUG 2021 15:23
 entering extended mode
 **./main.tex
 (main.tex
@@ -767,101 +767,178 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 9.19998pt on input line 50.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 7.35999pt on input line 50.
-<Figures//Home1.png, id=1, 919.435pt x 509.905pt>
-File: Figures//Home1.png Graphic file (type png)
-<use Figures//Home1.png>
-Package pdftex.def Info: Figures//Home1.png  used on input line 59.
-(pdftex.def)             Requested size: 341.43437pt x 189.35435pt.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 65.
+(Font)              scaled to size 10.07397pt on input line 52.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 65.
+(Font)              scaled to size 7.63599pt on input line 52.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 65.
+(Font)              scaled to size 5.51999pt on input line 52.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 65.
+(Font)              scaled to size 10.07397pt on input line 52.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 65.
+(Font)              scaled to size 7.63599pt on input line 52.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 65.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 67.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 67.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 67.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 67.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 67.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 67.
+(Font)              scaled to size 5.51999pt on input line 52.
 
 [1
 
 
-{C:/Users/Matei/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Figures//Home
-1.png>]
+{C:/Users/Matei/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+Class scrartcl Warning: Incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 53.
+
+(main.toc)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [2]
+<Figures//Home1.png, id=11, 903.87688pt x 506.39188pt>
+File: Figures//Home1.png Graphic file (type png)
+<use Figures//Home1.png>
+Package pdftex.def Info: Figures//Home1.png  used on input line 64.
+(pdftex.def)             Requested size: 341.43437pt x 191.28732pt.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 72.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 72.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 72.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 72.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 72.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 72.
+ [3 <./Figures//Home1.png>]
 LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
-78.
+88.
 
 (C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ts1futs.fd
 File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 103.
+(Font)              scaled to size 6.99199pt on input line 113.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 103.
-<Figures//Django_admin.png, id=10, 869.2475pt x 422.07687pt>
+(Font)              scaled to size 6.99199pt on input line 113.
+<Figures//Django_admin.png, id=18, 869.2475pt x 422.07687pt>
 File: Figures//Django_admin.png Graphic file (type png)
 <use Figures//Django_admin.png>
-Package pdftex.def Info: Figures//Django_admin.png  used on input line 107.
+Package pdftex.def Info: Figures//Django_admin.png  used on input line 117.
 (pdftex.def)             Requested size: 341.43437pt x 165.7879pt.
 
-[2 <./Figures//Django_admin.png>]
-<Figures//Staff_users.png, id=16, 902.37125pt x 396.48125pt>
+[4 <./Figures//Django_admin.png>]
+<Figures//Staff_users.png, id=24, 902.37125pt x 396.48125pt>
 File: Figures//Staff_users.png Graphic file (type png)
 <use Figures//Staff_users.png>
-Package pdftex.def Info: Figures//Staff_users.png  used on input line 122.
+Package pdftex.def Info: Figures//Staff_users.png  used on input line 133.
 (pdftex.def)             Requested size: 341.43437pt x 150.0171pt.
 
-Overfull \hbox (6.87506pt too wide) in paragraph at lines 130--131
-\T1/futs/m/n/10.95 con[]inute de tabele, s  le mod-i-fic m, s  le []tergem sau 
-s  ad ugam noi ar-ti-cole. Aceia[]i men[]iune
+Overfull \hbox (21.10626pt too wide) in paragraph at lines 142--143
+\T1/futs/m/n/10.95 interfa[]  nu este cea uti-lizt  în mod uzual pen-tru a ad u
+ga con[]iunut, ci este rez-er-vat  administra[]iei
  []
 
-<Figures//Database_admin.png, id=17, 878.28125pt x 349.80687pt>
+<Figures//Database_admin.png, id=25, 878.28125pt x 349.80687pt>
 File: Figures//Database_admin.png Graphic file (type png)
 <use Figures//Database_admin.png>
-Package pdftex.def Info: Figures//Database_admin.png  used on input line 134.
+Package pdftex.def Info: Figures//Database_admin.png  used on input line 146.
 (pdftex.def)             Requested size: 341.43437pt x 135.99178pt.
-<Figures//my_project_visualized.png, id=18, 1319.93124pt x 1352.05125pt>
+<Figures//my_project_visualized.png, id=26, 1319.93124pt x 1352.05125pt>
 File: Figures//my_project_visualized.png Graphic file (type png)
 <use Figures//my_project_visualized.png>
 Package pdftex.def Info: Figures//my_project_visualized.png  used on input line
- 142.
+ 155.
 (pdftex.def)             Requested size: 341.43437pt x 349.73016pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Excluding 'comment' comment. [3 <./Figures//Staff_users.png> <./Figures//Databa
-se_admin.png>] [4 <./Figures//my_project_visualized.png>] (main.aux) ) 
+
+Overfull \hbox (3.72089pt too wide) in paragraph at lines 163--164
+\T1/futs/m/n/10.95 mat din pagini HTML îm-pre-un  cu JavaScript pen-tru a re-al
+-iza efectele vizuale dorite. Infoma[]iile
+ []
+
+[5 <./Figures//Staff_users.png> <./Figures//Database_admin.png>]
+<Figures//Servicii_details.png, id=32, 614.295pt x 471.7625pt>
+File: Figures//Servicii_details.png Graphic file (type png)
+<use Figures//Servicii_details.png>
+Package pdftex.def Info: Figures//Servicii_details.png  used on input line 174.
+
+(pdftex.def)             Requested size: 341.43437pt x 262.2128pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./Figures//my_project_visualized.png>]
+<Figures//Servicii_site.png, id=37, 603.75563pt x 460.72125pt>
+File: Figures//Servicii_site.png Graphic file (type png)
+<use Figures//Servicii_site.png>
+Package pdftex.def Info: Figures//Servicii_site.png  used on input line 188.
+(pdftex.def)             Requested size: 341.43437pt x 260.54701pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures//Servicii_admin.png, id=38, 878.28125pt x 411.5375pt>
+File: Figures//Servicii_admin.png Graphic file (type png)
+<use Figures//Servicii_admin.png>
+Package pdftex.def Info: Figures//Servicii_admin.png  used on input line 195.
+(pdftex.def)             Requested size: 341.43437pt x 159.99033pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(C:\Users\Matei\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(conf_mail.py
+Overfull \hbox (139.81003pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+<Figures//form_programare.png, id=39, 700.11563pt x 432.61626pt>
+File: Figures//form_programare.png Graphic file (type png)
+<use Figures//form_programare.png>
+Package pdftex.def Info: Figures//form_programare.png  used on input line 221.
+(pdftex.def)             Requested size: 341.43437pt x 210.98044pt.
+ [7 <./Figures//Servicii_details.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures//form_contact.png, id=45, 354.32375pt x 372.39125pt>
+File: Figures//form_contact.png Graphic file (type png)
+<use Figures//form_contact.png>
+Package pdftex.def Info: Figures//form_contact.png  used on input line 228.
+(pdftex.def)             Requested size: 341.43437pt x 358.84958pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Excluding 'comment' comment. [8 <./Figures//Servicii_site.png>] [9 <./Figures//
+Servicii_admin.png> <./Figures//form_programare.png>] [10 <./Figures//form_cont
+act.png>] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 10579 strings out of 479321
- 209651 string characters out of 2856584
- 670781 words of memory out of 3000000
- 27846 multiletter control sequences out of 15000+600000
- 546558 words of font info for 163 fonts, out of 8000000 for 9000
+ 11077 strings out of 479321
+ 215291 string characters out of 2856584
+ 877003 words of memory out of 3000000
+ 28326 multiletter control sequences out of 15000+600000
+ 547680 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,18n,116p,10601b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users
-/Matei/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Mate
-i/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/M
-atei/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/User
-s/Matei/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (4 pages, 933461 bytes).
+ 111i,19n,116p,10601b,1389s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/Matei/AppData/Local/Programs/MiKTeX/fonts/enc/d
+vips/base/8r.enc} <C:\Users\Matei\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecsx0600.pk> <C:\Users\Matei\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
+nappen/ec/dpi600\ecsx1095.pk><C:/Users/Matei/AppData/Local/Programs/MiKTeX/font
+s/type1/adobe/utopia/putb8a.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTeX/f
+onts/type1/adobe/utopia/putr8a.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTe
+X/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on main.pdf (10 pages, 3030987 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

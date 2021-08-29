@@ -23,7 +23,7 @@
 
 \input{structure.tex} % Include the file specifying the document structure and custom commands
 \usepackage{comment}
-
+%\usepackage{float}
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -48,6 +48,11 @@
 
 \maketitle % Print the title
 
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
 %----------------------------------------------------------------------------------------
 %	FIGURE EXAMPLE
 %----------------------------------------------------------------------------------------
@@ -58,7 +63,9 @@
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Home1.png} % Example image
 	\caption{https://first-dental-website.herokuapp.com/}
+	\label{fig:acasa}
 \end{figure}
+
 
 %------------------------------------------------
 
@@ -66,6 +73,8 @@
 
 First-dental-website este site de prezentare al unui cabinet dentar, cu applicație blog integrată. A fost dezvoltat pentru a ușura accesul la informații clientilor care doresc sa vizite cabinetul medical, cât și pentru a putea distibui informații la o populație mai mare. De mentionaț este că pentru implementarea acestei aplicații s-a folosit framework-ul Django, front-end-ul (html, css și js) fiind descărcat de pe https://themeslab.org/ și adaptat pentru a reflecta informațiile cabinetului dentar. Ca facilități oferite de această implementare putem menționa: trimitere de email pentru contact, programare vizită și newletter; harta interactivă google-maps integrată; applicație blog, cu posibilitatea de înregistrare, logare, publicare și editare articole, profile utilizatori și sectiune comentari. Toate aceste aspecte vor fi pe larg trate în cuprinsul acestui raport. 
 
+
+\pagebreak
 %----------------------------------------------------------------------------------------
 %	TEXT EXAMPLE
 %----------------------------------------------------------------------------------------
@@ -73,6 +82,7 @@ First-dental-website este site de prezentare al unui cabinet dentar, cu applica�
 \section{Elementele Aplicației}
 
 Aplicația poate fi descompusă în urmatoarele elemente:
+
 
 \begin{itemize}
 	\item Administrare site
@@ -106,6 +116,7 @@ Partea de administrare a sitului poate fi modificată, dar nu este recomandat ca
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Django_admin.png} % Example image
 	\caption{The Django admin site}
+	\label{fig:djadmin}
 \end{figure}
 
 %------------------------------------------------
@@ -114,49 +125,110 @@ Partea de administrare a sitului poate fi modificată, dar nu este recomandat ca
 
 
 
-În secțiunea adminintrativă pentru gestionare a utilizatorilor, gasim lista completă profilelor a celor care access pe site. Aici putem sa verificăm tipul de access, datele personale și alte informații legate de utilizatori. Trebuie mentionat ca nu toți utilizatorii au acelasi privilegii: cei care fac parte din staff au access la sectiunea administrativă, restul având access numai pe pagina de blog. \\
-Tot din aceasta zonă putem sa adaugam un nou utilizator, să stergem un utilizator existen sau sa modificăm informatiile sau tipul de access al unui utilizator existent. Este de mentionat că în această secțiune, numai personalul administrativ are access și modificările conturilor ar trebui facute în această secțiune numai dacă există motive întemeiate. Altfe, este disponibilă o pagina din blog pentru ca utilizatorii să își poată gestiona singuri conturile.
+Secțiunea adminintrativă Fig.\ref{fig:staff&users}, folosită pentru gestionare utilizatorilor, ne oferă lista completă a profilelor celor care access pe site. Aici putem sa verificăm tipul de access, datele personale și alte informații legate de utilizatori. Trebuie mentionat ca nu toți utilizatorii au același privilegii: cei care fac parte din staff au access la sectiunea administrativă, restul având access numai pe pagina de blog. \\
+Tot din aceasta zonă putem sa adaugam un nou utilizator, să stergem un utilizator existent sau să modificăm informațiile sau tipul de access al unui utilizator existent. Este de mentionat că în această secțiune, numai personalul administrativ are access și modificările conturilor ar trebui facute în această secțiune numai dacă există motive întemeiate. Altfe, este disponibilă o pagina din blog pentru ca utilizatorii să își poată gestiona singuri conturile.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Staff_users.png} % Example image
 	\caption{Staff si Utilizatori}
+	\label{fig:staff&users}
 \end{figure}
 
 %------------------------------------------------
 
 \subsubsection{Gestionare Bază de Date}
 
-Tot în secțiunea administrativă avem posibilitatea să vedem continutul bazei de date, pentru modelele care au fost înregistrate în aplicația admin. Aici putem să accesăm direct datele conținute de  tabele, să le modificăm, să le ștergem sau să adăugam noi articole. Aceiași mențiune se aplică și aici, ca în cazul celorlalte view-uri ale administratiei, și anume că această interfață nu este cea utiliztă în mod uzual pentru a adăuga conțiunut, ci este rezervată administrației pentru a interveni sau a modifica date în caz de necesitate.
+Tot în secțiunea administrativă avem posibilitatea să vedem conținutul bazei de date Fig.\ref{fig:dbadmin}, pentru modelele care au fost înregistrate în aplicația admin. Aici putem să accesăm direct datele conținute de  tabele, să le modificăm, să le ștergem sau să adăugam noi articole. Aceiași mențiune se aplică și aici, ca în cazul celorlalte view-uri ale administratiei, și anume că această interfață nu este cea utiliztă în mod uzual pentru a adăuga conțiunut, ci este rezervată administrației pentru a interveni sau a modifica date în caz de necesitate.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=0.8\columnwidth]{Database_admin.png} % Example image
 	\caption{Admin Database View}
+	\label{fig:dbadmin}
 \end{figure}
 
-Figura care urmează arată cum este structurată baza de date folosita în această aplicatie. Baza de date a fost inițial dezvoltată în SqLite, ulterior fiind schimbată la PostgreSQL pentru a putea fii folosită pe serverul de hoasting. 
+Figura \ref{fig:dbstruct} arată cum este structurată baza de date folosita în această aplicatie. Baza de date a fost inițial dezvoltată în SqLite, ulterior fiind schimbată la PostgreSQL pentru a putea fii folosită pe serverul de hoasting. 
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
 	\includegraphics[width=0.8\columnwidth]{my_project_visualized.png} % Example image
 	\caption{Structură Bază Date}
+	\label{fig:dbstruct}
 \end{figure}
 %------------------------------------------------
 
 \subsection{Web-site}
 
+Partea de Web-site efectiv a aplicației a fost realizată cu un template \footnote{https://colorlib.com/} gratuit. Acesta este format din pagini HTML împreună cu JavaScript pentru a realiza efectele vizuale dorite. Infomațiile oferite de Site au fost actualizate pentru a reflecta imaginea cabinetului B-Wise Dental.
+
 %------------------------------------------------
 
 \subsubsection{Prezentare Cabinet}
+
+Prezentarea Cabinetului este realizată în trei secțiuni. Pagina de start (acasă) \footnote{https://first-dental-website.herokuapp.com/} are un sumar cuprinzător ce conține: deviza cabinetului, informații legate de experiența și serviciile oferite, o lista scurtă de prețuri și un formular de contact pentru programări. Acesta din urmă va fi discutat pe larg în ultima parte a acestei sectiuni.\\
+Informațiile legate de experiență și echipă sunt prezentate din nou în secțiunea "despre" a site-ului. Iar în secțiunea "servicii", Fig.\ref{fig:serv_details}, găsim o descriere detaliata a serviciilor oferite de cabinet. 
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Servicii_details.png} % Example image
+	\caption{Pagina de prezentare a serviciilor oferite}
+	\label{fig:serv_details}
+\end{figure}
+
 
 %------------------------------------------------
 
 \subsubsection{Listă Prețuri}
 
+În secțiunea "Tarife" sunt prezentate costurile aferente serviciilor Fig.\ref{fig:serv_site} . Ca utilitate oferită de aceast site, detaliile legate de numele serviciului, costul sau în câte etape se realizează serviciul, pot fi modificate din sectiune "admin" Fig.\ref{fig:serv_admin}, cu ajutorul unui cont de staff. Aceasta ușurează mentenanța site-ului și poate fi realizată independent de serviciul de hoasting și fară a modifica pagina HTML. 
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Servicii_site.png} % Example image
+	\caption{Prezentarea tarifelor}
+	\label{fig:serv_site}
+\end{figure}
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Servicii_admin.png} % Example image
+	\caption{Posibilitatea de a gestiona informațiile prezentate in secțiunea "Tarife" din zona de administrație}
+	\label{fig:serv_admin}
+\end{figure}
+
+
 %------------------------------------------------
 
 \subsubsection{Programare și Contact}
+
+Pentru a facilita contactul cu clienții, sunt disponibilile două formulare de contact. Unul presentat în Fig.\ref{fig:form_prog} destinat realizării unei programări pentru consult. Programare care va fi confirmată ulterior telefonic de către secretara cabinetului. Și un al doilea formular prezentat in Fig.\ref{fig:form_contact} care este destinat trimiterii unui mesaj către cabinet. Tot aici este intgrat un iframe goolge maps pentru a ușura gasirea locației cabinetului.\\
+Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, care va expedia mesajele trimise de pe site către adresa cabinetului. Din motive de securitate, toate detallile legate de comunicare cu serverul de mail vor fi stocate ca variablile de mediu și se vor evita salvarea de date ce pot compromite accesul la serviciul de mail, direct în codul uplodat pe serverul de host sau git repository.
+
+\lstinputlisting[
+	caption=Gmail mail server set-up, % Caption above the listing
+	label=lst:gmail_conf, % Label for referencing this listing
+	language=Python, % Use Perl functions/syntax highlighting
+	frame=single, % Frame around the code listing
+	showstringspaces=false, % Don't put marks in string spaces
+	numbers=left, % Line numbers on left
+	numberstyle=\tiny, % Line numbers styling
+	]{conf_mail.py}
+ 
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{form_programare.png} % Example image
+	\caption{Posibilitatea de a gestiona informațiile prezentate in secțiunea "Tarife" din zona de administrație}
+	\label{fig:form_prog}
+\end{figure}
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{form_contact.png} % Example image
+	\caption{Posibilitatea de a gestiona informațiile prezentate in secțiunea "Tarife" din zona de administrație}
+	\label{fig:form_contact}
+\end{figure}
 
 %------------------------------------------------
 

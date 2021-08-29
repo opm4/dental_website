@@ -1,0 +1,16 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Descrierea Aplicației}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Site de prezentare cabinet dentar cu applicație blog}{3}{}%
+\contentsline {section}{\numberline {2}Elementele Aplicației}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Administrare Site}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Staff și Utilizatori}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Gestionare Bază de Date}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Web-site}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Prezentare Cabinet}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Listă Prețuri}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Programare și Contact}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Blog}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Creare și Înregistrare Utilizator}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Create, Editare, Stergere Articol Blog}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}Comentare Articol}{8}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
