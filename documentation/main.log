@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  29 AUG 2021 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.7.8)  5 SEP 2021 14:19
 entering extended mode
 **./main.tex
 (main.tex
@@ -918,27 +918,80 @@ Package pdftex.def Info: Figures//form_contact.png  used on input line 228.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Excluding 'comment' comment. [8 <./Figures//Servicii_site.png>] [9 <./Figures//
-Servicii_admin.png> <./Figures//form_programare.png>] [10 <./Figures//form_cont
-act.png>] (main.aux) ) 
+<Figures//blog_home.png, id=46, 903.375pt x 478.78876pt>
+File: Figures//blog_home.png Graphic file (type png)
+<use Figures//blog_home.png>
+Package pdftex.def Info: Figures//blog_home.png  used on input line 243.
+(pdftex.def)             Requested size: 341.43437pt x 180.96265pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures//blog_register.png, id=47, 439.6425pt x 467.24562pt>
+File: Figures//blog_register.png Graphic file (type png)
+<use Figures//blog_register.png>
+Package pdftex.def Info: Figures//blog_register.png  used on input line 256.
+(pdftex.def)             Requested size: 341.43437pt x 362.88159pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures//blog_login.png, id=48, 425.08812pt x 357.335pt>
+File: Figures//blog_login.png Graphic file (type png)
+<use Figures//blog_login.png>
+Package pdftex.def Info: Figures//blog_login.png  used on input line 263.
+(pdftex.def)             Requested size: 341.43437pt x 287.02975pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures//blog_new_post.png, id=49, 331.73938pt x 432.11438pt>
+File: Figures//blog_new_post.png Graphic file (type png)
+<use Figures//blog_new_post.png>
+Package pdftex.def Info: Figures//blog_new_post.png  used on input line 278.
+(pdftex.def)             Requested size: 341.43437pt x 444.76628pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures//blog_edit_delete.png, id=50, 357.335pt x 256.45813pt>
+File: Figures//blog_edit_delete.png Graphic file (type png)
+<use Figures//blog_edit_delete.png>
+Package pdftex.def Info: Figures//blog_edit_delete.png  used on input line 285.
+
+(pdftex.def)             Requested size: 341.43437pt x 245.05824pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./Figures//Servicii_site.png>]
+<Figures//blog_comment.png, id=55, 433.62pt x 334.75063pt>
+File: Figures//blog_comment.png Graphic file (type png)
+<use Figures//blog_comment.png>
+Package pdftex.def Info: Figures//blog_comment.png  used on input line 301.
+(pdftex.def)             Requested size: 341.43437pt x 263.59708pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Excluding 'comment' comment. [9 <./Figures//Servicii_admin.png> <./Figures//for
+m_programare.png>] [10 <./Figures//form_contact.png> <./Figures//blog_home.png>
+] [11 <./Figures//blog_register.png>] [12 <./Figures//blog_login.png>] [13 <./F
+igures//blog_new_post.png>] [14 <./Figures//blog_edit_delete.png> <./Figures//b
+log_comment.png>] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 11077 strings out of 479321
- 215291 string characters out of 2856584
- 877001 words of memory out of 3000000
- 28326 multiletter control sequences out of 15000+600000
+ 11119 strings out of 479321
+ 216359 string characters out of 2856584
+ 877073 words of memory out of 3000000
+ 28362 multiletter control sequences out of 15000+600000
  547680 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,19n,116p,10601b,1389s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/Matei/AppData/Local/Programs/MiKTeX/fonts/enc/d
-vips/base/8r.enc} <C:\Users\Matei\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecsx0600.pk> <C:\Users\Matei\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
-nappen/ec/dpi600\ecsx1095.pk><C:/Users/Matei/AppData/Local/Programs/MiKTeX/font
-s/type1/adobe/utopia/putb8a.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTeX/f
-onts/type1/adobe/utopia/putr8a.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTe
-X/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (10 pages, 3030962 bytes).
+{C:/Users/Matei/AppData/Local/Programs/MiKTeX/fon
+ts/enc/dvips/base/8r.enc} <C:\Users\Matei\AppData\Local\MiKTeX\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecsx0600.pk> <C:\Users\Matei\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecsx1095.pk><C:/Users/Matei/AppData/Local/Programs/MiK
+TeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Matei/AppData/Local/Programs/
+MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Matei/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on main.pdf (14 pages, 4467754 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

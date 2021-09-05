@@ -235,18 +235,73 @@ Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, 
 
 
 \subsection{Blog}
+ 
+O secțiune aparte a acestei aplicații o reprezintă pagina de blog, Fig.\ref{fig:blog_home}. în această zonă se pot publica articole scrise de către utilizatorii înregistrati. Acestea pot fi comentate la randul lor de către cei care le citesc. Mai multe detalii vor fi precizate în continuare.
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{blog_home.png} % Example image
+	\caption{Pagina de start a blog-ului, putem vedea ultimele articole publicate și putem filtra articolele pe categorii}
+	\label{fig:blog_home}
+\end{figure}
 
 %------------------------------------------------
 
 \subsubsection{Creare și Înregistrare Utilizator}
 
+Aplicația blog are pagini dedicate pentru: creare utilizator nou Fig. și înregistrare utilizator existent. Acest lucru este necesar deoarece vrem ca vizitatorii sa poată accessa aceasată sectiune, pentru a publica articole noi. Iar pentru ca sectiune "admin" este rezervată mai mult pentru administrarea site-ului și nu este indicat să fie deschisă utilizatorilor comuni, atunci pagini dedicate au fost create pentru a oferi această facilitate și pentru a putea modifica conform necesitătilor aplicației informațiile pe care le prezentăm sau le cerem utilizatorilor. 
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{blog_register.png} % Example image
+	\caption{Creare cont utilizator nou}
+	\label{fig:blog_register}
+\end{figure}
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{blog_login.png} % Example image
+	\caption{Înregistrare utilizator existent}
+	\label{fig:blog_login}
+\end{figure}
+
+
 %------------------------------------------------
 
 \subsubsection{Create, Editare, Stergere Articol Blog}
 
+După ce utilizatorul s-a înregistrat și este logat pe pagina de blog, el are posibilitatea să publice articole. Aceste articole pot fi formatate cu ajutorul unui editor Fig.\ref{fig:blog_new_post} care se inregistrează ca aplicație în Django și poate fi integrat cu ușurință în aplicație. Din cauza limitarilor technice a serviciului de hoasting (heroku.com) gazduirea de imagini adaugate de utilizator nu este posibilă, numai cu folosirea unui serviciu extern de fișiere statice ( de ex. Amazon S3), care nu a fost impelmentat în acest exemplu.\\
+În urma publicării aricolului, autorul acestuia are posibiliatea de a-l modifica sau de a-l sterge Fir.\ref{fig:blog_edit}. Pentru acete optiuni el trebuie sa fie logat pe site.
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{blog_new_post.png} % Example image
+	\caption{Un nou articol poate fi publicat de către un utilizator înregistrat. Pentru editarea articolului este folosit ckeditor, care este integrat in Django apps.}
+	\label{fig:blog_new_post}
+\end{figure}
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{blog_edit_delete.png} % Example image
+	\caption{Utilizatorul înregistrat are posibilitatea să își modfice propriile articole sau să le șteargă}
+	\label{fig:blog_edit}
+\end{figure}
+
+
+
 %------------------------------------------------
 
 \subsubsection{Comentare Articol}
+
+O alta facilitate implementată în aplicația blog este comentarea de articole. Comentariile pot să fie adaugate și de către utilizatori ne-înregistrați Fig.\ref{fig:blog_comment} . Desigur în acest caz, o moderare a comentarilor este necesară pentru a filtra mesajele malițioase sau nepotrivite.\\
+Pentru a publica un comentariu, un utilizator va trbui sa furnizeze un nume sub care se va publica comentariul.
+
+\begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
+	\centering
+	\includegraphics[width=0.8\columnwidth]{blog_comment.png} % Example image
+	\caption{Comentariile pot fi adaugate de orice utilizator, înregistrat sau nu. }
+	\label{fig:blog_comment}
+\end{figure}
 
 %------------------------------------------------
 

@@ -12,5 +12,5 @@
 \contentsline {subsection}{\numberline {2.3}Blog}{8}{}%
 \contentsline {subsubsection}{\numberline {2.3.1}Creare și Înregistrare Utilizator}{8}{}%
 \contentsline {subsubsection}{\numberline {2.3.2}Create, Editare, Stergere Articol Blog}{8}{}%
-\contentsline {subsubsection}{\numberline {2.3.3}Comentare Articol}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}Comentare Articol}{9}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
