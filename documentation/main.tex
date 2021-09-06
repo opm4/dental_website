@@ -34,7 +34,7 @@
 	\vspace{25pt} % Whitespace
 	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
 	\vspace{20pt} % Whitespace
-	{\huge Proiect Curs}\\ % The assignment title
+	{\huge Proiect Curs - First dental website}\\ % The assignment title
 	\vspace{12pt} % Whitespace
 	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
 	\vspace{12pt} % Whitespace
@@ -69,9 +69,9 @@
 
 %------------------------------------------------
 
-\subsection{Site de prezentare cabinet dentar cu applicație blog}
+\subsection{Site de prezentare cabinet dentar cu aplicație blog}
 
-First-dental-website este site de prezentare al unui cabinet dentar, cu applicație blog integrată. A fost dezvoltat pentru a ușura accesul la informații clientilor care doresc sa vizite cabinetul medical, cât și pentru a putea distibui informații la o populație mai mare. De mentionaț este că pentru implementarea acestei aplicații s-a folosit framework-ul Django, front-end-ul (html, css și js) fiind descărcat de pe https://themeslab.org/ și adaptat pentru a reflecta informațiile cabinetului dentar. Ca facilități oferite de această implementare putem menționa: trimitere de email pentru contact, programare vizită și newletter; harta interactivă google-maps integrată; applicație blog, cu posibilitatea de înregistrare, logare, publicare și editare articole, profile utilizatori și sectiune comentari. Toate aceste aspecte vor fi pe larg trate în cuprinsul acestui raport. 
+First-dental-website este un site de prezentare al unui cabinet dentar, cu applicație blog integrată. A fost dezvoltat pentru a ușura accesul la informații clientilor care doresc sa vizite cabinetul medical, cât și pentru a putea distibui informații la o populație mai mare. De menționat este că pentru implementarea acestei aplicații s-a folosit framework-ul Django pentru back-end, în timp ce front-end-ul (html, css și js) a fost descărcat de pe https://themeslab.org/ și adaptat pentru a reflecta informațiile cabinetului dentar. Ca facilități oferite de această implementare putem menționa: trimitere de email pentru contact, programare vizită și newletter; harta interactivă google-maps integrată; applicație blog, cu posibilitatea de înregistrare, logare, publicare și editare articole, profile utilizatori și sectiune comentari. Toate aceste aspecte vor fi pe larg trate în cuprinsul acestui raport. 
 
 
 \pagebreak
@@ -99,7 +99,7 @@ Aplicația poate fi descompusă în urmatoarele elemente:
 	\item Blog
 		\begin{itemize}
 			\item Creare și Înregistrare Utilizator
-			\item Create, Editare, Stergere Articol Blog
+			\item Creare, Editare, Stergere Articol Blog
 			\item Comentare Articol
 		\end{itemize}
 \end{itemize}
@@ -109,7 +109,7 @@ Aplicația poate fi descompusă în urmatoarele elemente:
 \subsection{Administrare Site}
 
 
-Una dintre facilitățile "bateriilor incluse" din Django este partea de administrare a sitetului. Aceasta dispune de o interfață care este capabilă să citeasca metadata modelelor înregistrate din aplicații și să furnizeze o imagine de ansamblu centrată pe model în care utilizatorii cu statut privilegiat (admin sau staff) pot sa gestioneze conținutul sitetului. Această interfață nu este totuși destinată pentru a construi un front-end in jurul ei, ci mai degrabă pentru a pentru a oferi un tool specific pentru membrii care se ocupă cu administrarea siteului.\\
+Una dintre facilitățile "bateriilor incluse" din Django este partea de administrare a sitetului. Aceasta dispune de o interfață ,Fig.\ref{fig:djadmin} , care este capabilă să citeasca metadata modelelor înregistrate din aplicații și să furnizeze o imagine de ansamblu centrată pe model în care utilizatorii cu statut privilegiat (admin sau staff) pot sa gestioneze conținutul sitetului. Această interfață nu este totuși destinată pentru a construi un front-end in jurul ei, ci mai degrabă pentru a pentru a oferi un tool specific pentru membrii care se ocupă cu administrarea siteului.\\
 Partea de administrare a sitului poate fi modificată, dar nu este recomandat ca aceste facilități să fie folosite în afara acestei secțuni. În cazul în care o interfața orientată spre proces este necesară, una care să abstractizeze conținutul bazelor de date, este recomandat să fie adăugată în secțiunea de views a site-ului \footnote{https://docs.djangoproject.com/en/3.2/ref/contrib/admin/}. 
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
@@ -125,8 +125,8 @@ Partea de administrare a sitului poate fi modificată, dar nu este recomandat ca
 
 
 
-Secțiunea adminintrativă Fig.\ref{fig:staff&users}, folosită pentru gestionare utilizatorilor, ne oferă lista completă a profilelor celor care access pe site. Aici putem sa verificăm tipul de access, datele personale și alte informații legate de utilizatori. Trebuie mentionat ca nu toți utilizatorii au același privilegii: cei care fac parte din staff au access la sectiunea administrativă, restul având access numai pe pagina de blog. \\
-Tot din aceasta zonă putem sa adaugam un nou utilizator, să stergem un utilizator existent sau să modificăm informațiile sau tipul de access al unui utilizator existent. Este de mentionat că în această secțiune, numai personalul administrativ are access și modificările conturilor ar trebui facute în această secțiune numai dacă există motive întemeiate. Altfe, este disponibilă o pagina din blog pentru ca utilizatorii să își poată gestiona singuri conturile.
+Secțiunea adminintrativă Fig.\ref{fig:staff&users}, folosită pentru gestionare utilizatorilor, ne oferă lista completă a profilelor celor care au access pe site. Aici putem sa verificăm tipul de access, datele personale și alte informații legate de utilizatori. Trebuie mentionat ca nu toți utilizatorii au același privilegii: cei care fac parte din staff au access la sectiunea administrativă, restul având access numai pe pagina de blog. \\
+Tot din această zonă putem sa adaugam un nou utilizator, să stergem un utilizator existent sau să modificăm informațiile sau tipul de access al utilizatorului. Este de mentionat că în această secțiune numai personalul administrativ are access și modificările conturilor ar trebui facute aici, în secțiunea admin, numai dacă există motive întemeiate. Altfel, este disponibilă o pagina din blog pentru ca utilizatorii să își poată gestiona singuri conturile.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -139,7 +139,7 @@ Tot din aceasta zonă putem sa adaugam un nou utilizator, să stergem un utiliza
 
 \subsubsection{Gestionare Bază de Date}
 
-Tot în secțiunea administrativă avem posibilitatea să vedem conținutul bazei de date Fig.\ref{fig:dbadmin}, pentru modelele care au fost înregistrate în aplicația admin. Aici putem să accesăm direct datele conținute de  tabele, să le modificăm, să le ștergem sau să adăugam noi articole. Aceiași mențiune se aplică și aici, ca în cazul celorlalte view-uri ale administratiei, și anume că această interfață nu este cea utiliztă în mod uzual pentru a adăuga conțiunut, ci este rezervată administrației pentru a interveni sau a modifica date în caz de necesitate.
+Tot în secțiunea administrativă avem posibilitatea să vedem conținutul bazei de date Fig.\ref{fig:dbadmin}, pentru modelele care au fost înregistrate în aplicația admin. Aici putem să accesăm direct datele conținute de  tabele, să le modificăm, să le ștergem sau să adăugam noi articole. Aceiași mențiune se aplică și aici ca în cazul celorlalte view-uri ale administratiei, și anume că această interfață nu ar trebui utiliztă în mod uzual pentru a adăuga conținut, ci este rezervată administrației pentru a interveni sau a modifica date în caz de necesitate.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -148,7 +148,7 @@ Tot în secțiunea administrativă avem posibilitatea să vedem conținutul baze
 	\label{fig:dbadmin}
 \end{figure}
 
-Figura \ref{fig:dbstruct} arată cum este structurată baza de date folosita în această aplicatie. Baza de date a fost inițial dezvoltată în SqLite, ulterior fiind schimbată la PostgreSQL pentru a putea fii folosită pe serverul de hoasting. 
+Figura \ref{fig:dbstruct} arată cum este structurată baza de date folosita în această aplicatie. Baza de date a fost inițial dezvoltată în SqLite, ulterior fiind schimbată la PostgreSQL pentru a putea fii folosită cu serverul de hoasting. 
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -160,14 +160,14 @@ Figura \ref{fig:dbstruct} arată cum este structurată baza de date folosita în
 
 \subsection{Web-site}
 
-Partea de Web-site efectiv a aplicației a fost realizată cu un template \footnote{https://colorlib.com/} gratuit. Acesta este format din pagini HTML împreună cu JavaScript pentru a realiza efectele vizuale dorite. Infomațiile oferite de Site au fost actualizate pentru a reflecta imaginea cabinetului B-Wise Dental.
+Partea de Web-site efectiv a aplicației a fost realizată cu un template \footnote{https://colorlib.com/} gratuit. Acesta este format din pagini HTML împreună cu JavaScript și CSS pentru a realiza efectele vizuale dorite. Infomațiile oferite de Site au fost actualizate pentru a reflecta imaginea cabinetului B-Wise Dental.
 
 %------------------------------------------------
 
 \subsubsection{Prezentare Cabinet}
 
 Prezentarea Cabinetului este realizată în trei secțiuni. Pagina de start (acasă) \footnote{https://first-dental-website.herokuapp.com/} are un sumar cuprinzător ce conține: deviza cabinetului, informații legate de experiența și serviciile oferite, o lista scurtă de prețuri și un formular de contact pentru programări. Acesta din urmă va fi discutat pe larg în ultima parte a acestei sectiuni.\\
-Informațiile legate de experiență și echipă sunt prezentate din nou în secțiunea "despre" a site-ului. Iar în secțiunea "servicii", Fig.\ref{fig:serv_details}, găsim o descriere detaliata a serviciilor oferite de cabinet. 
+Informațiile legate de experiență și echipă sunt prezentate din nou în secțiunea "despre" a site-ului. Iar în secțiunea "servicii", Fig.\ref{fig:serv_details}, găsim o descriere detaliată a serviciilor oferite de cabinet. 
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -202,11 +202,11 @@ Informațiile legate de experiență și echipă sunt prezentate din nou în sec
 
 \subsubsection{Programare și Contact}
 
-Pentru a facilita contactul cu clienții, sunt disponibilile două formulare de contact. Unul presentat în Fig.\ref{fig:form_prog} destinat realizării unei programări pentru consult. Programare care va fi confirmată ulterior telefonic de către secretara cabinetului. Și un al doilea formular prezentat in Fig.\ref{fig:form_contact} care este destinat trimiterii unui mesaj către cabinet. Tot aici este intgrat un iframe goolge maps pentru a ușura gasirea locației cabinetului.\\
-Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, care va expedia mesajele trimise de pe site către adresa cabinetului. Din motive de securitate, toate detallile legate de comunicare cu serverul de mail vor fi stocate ca variablile de mediu și se va evita salvarea de date ce pot compromite accesul la serviciul de mail direct în codul uplodat pe serverul de host sau git repository.
+Pentru a facilita contactul cu clienții, sunt disponibilile două formulare de contact. Unul presentat în Fig.\ref{fig:form_prog} destinat realizării unei programări pentru consult. Programările vor fi confirmate ulterior telefonic de către secretara cabinetului. Și un al doilea formular prezentat în Fig.\ref{fig:form_contact} care este destinat trimiterii unui mesaj către cabinet. Tot în secțiunea "contact" este integrat un iframe goolge maps pentru a ușura localizarea cabinetului.\\
+Automatizarea mesajelor este realizată cu ajutorul serverului gmail, care va expedia mesajele trimise de pe site către adresa cabinetului. Din motive de securitate toate detallile legate de comunicare cu serverul de mail vor fi stocate ca variablile de mediu și se va evita salvarea de date ce pot compromite accesul la serviciul de mail direct în codul uplodat pe serverul de host, sau în git repository.
 
 \lstinputlisting[
-	caption=Gmail mail server set-up, % Caption above the listing
+	caption=Gmail mail server set-up - se poate observa că datele sensibile nu sunt date explicit ci sunt transmise prin variabile de mediu, % Caption above the listing
 	label=lst:gmail_conf, % Label for referencing this listing
 	language=Python, % Use Perl functions/syntax highlighting
 	frame=single, % Frame around the code listing
@@ -236,7 +236,7 @@ Automatizarea mesajelor este realizată în spate cu ajutorul serverului gmail, 
 
 \subsection{Blog}
  
-O secțiune aparte a acestei aplicații o reprezintă pagina de blog, Fig.\ref{fig:blog_home}. în această zonă se pot publica articole scrise de către utilizatorii înregistrati. Acestea pot fi comentate la randul lor de către cei care le citesc. Mai multe detalii vor fi precizate în continuare.
+O secțiune aparte a acestei aplicații o reprezintă pagina de blog, Fig.\ref{fig:blog_home}. În această zonă se pot publica articole scrise de către utilizatorii înregistrati. Acestea pot fi comentate la rândul lor de către cei care le citesc. Mai multe detalii vor fi precizate în continuare.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -249,7 +249,7 @@ O secțiune aparte a acestei aplicații o reprezintă pagina de blog, Fig.\ref{f
 
 \subsubsection{Creare și Înregistrare Utilizator}
 
-Aplicația blog are pagini dedicate pentru: creare utilizator nou Fig. și înregistrare utilizator existent. Acest lucru este necesar deoarece vrem ca vizitatorii sa poată accessa aceasată sectiune, pentru a publica articole noi. Iar pentru ca sectiune "admin" este rezervată mai mult pentru administrarea site-ului și nu este indicat să fie deschisă utilizatorilor comuni, atunci pagini dedicate au fost create pentru a oferi această facilitate și pentru a putea modifica conform necesitătilor aplicației informațiile pe care le prezentăm sau le cerem utilizatorilor. 
+Aplicația blog are pagini dedicate pentru: creare utilizator nou Fig.\ref{fig:blog_login} și înregistrare utilizator existent Fig.\ref{fig:blog_login}. Acest lucru este necesar deoarece vrem ca vizitatorii sa poată accessa aceasată sectiune, pentru a publica articole noi. Iar pentru ca sectiune "admin" este rezervată mai mult pentru administrarea site-ului și nu este indicat să fie deschisă utilizatorilor comuni, atunci pagini dedicate au fost create pentru a oferi această facilitate și pentru a putea modifica conform necesitătilor aplicației, informațiile pe care le prezentăm sau le cerem utilizatorilor. 
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -270,8 +270,8 @@ Aplicația blog are pagini dedicate pentru: creare utilizator nou Fig. și înre
 
 \subsubsection{Create, Editare, Stergere Articol Blog}
 
-După ce utilizatorul s-a înregistrat și este logat pe pagina de blog, el are posibilitatea să publice articole. Aceste articole pot fi formatate cu ajutorul unui editor Fig.\ref{fig:blog_new_post} care se inregistrează ca aplicație în Django și poate fi integrat cu ușurință în aplicație. Din cauza limitarilor technice a serviciului de hoasting (heroku.com) gazduirea de imagini adaugate de utilizator nu este posibilă, numai cu folosirea unui serviciu extern de fișiere statice ( de ex. Amazon S3), care nu a fost impelmentat în acest exemplu.\\
-În urma publicării aricolului, autorul acestuia are posibiliatea de a-l modifica sau de a-l sterge Fir.\ref{fig:blog_edit}. Pentru acete optiuni el trebuie sa fie logat pe site.
+După ce utilizatorul s-a înregistrat și este logat pe pagina de blog, el are posibilitatea să publice articole. Aceste articole pot fi formatate cu ajutorul unui editor Fig.\ref{fig:blog_new_post} care trebuie înregistrat în secțunea "settings" a aplicație Django, dupa care poate fi cu ușurință folosit. Din cauza limitarilor technice a serviciului de hoasting (heroku.com) gazduirea de imagini adaugate de utilizator nu este posibilă, numai dacă se folosește un serviciu extern de fișiere statice ( de ex. Amazon S3), care nu a fost implementat în acest exemplu.\\
+În urma publicării aricolului, autorul acestuia are posibilitea de a-l modifica sau de a-l șterge Fir.\ref{fig:blog_edit}. Pentru aceste opțiuni el trebuie să fie logat pe site.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
@@ -293,8 +293,8 @@ După ce utilizatorul s-a înregistrat și este logat pe pagina de blog, el are 
 
 \subsubsection{Comentare Articol}
 
-O alta facilitate implementată în aplicația blog este comentarea de articole. Comentariile pot să fie adaugate și de către utilizatori ne-înregistrați Fig.\ref{fig:blog_comment} . Desigur în acest caz, o moderare a comentarilor este necesară pentru a filtra mesajele malițioase sau nepotrivite.\\
-Pentru a publica un comentariu, un utilizator va trbui sa furnizeze un nume sub care se va publica comentariul.
+O altă facilitate implementată în aplicația blog este comentarea de articole. Comentariile pot să fie adaugate și de către utilizatori neînregistrați Fig.\ref{fig:blog_comment}. Desigur în acest caz o moderare a comentarilor este necesară pentru a filtra mesajele malițioase sau nepotrivite.\\
+Pentru a publica un comentariu, un utilizator va trbui să furnizeze un nume sub care se va publica comentariul.
 
 \begin{figure}[h] % [h] forces the figure to be output where it is defined in the code (it suppresses floating)
 	\centering
